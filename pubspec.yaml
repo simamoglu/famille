@@ -1,0 +1,56 @@
+name: famille
+description: A social media app project developed by Sertan Hakkı İmamoğlu.
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_launcher_icons: "^0.9.2"
+  add_2_calendar: ^2.1.0
+  flutter_rounded_date_picker: ^2.0.2
+  #firebase_auth: ^0.16.1
+  #cloud_firestore: ^0.13.5
+  #firebase_storage: ^3.1.5
+  #image_picker: ^0.6.5+3
+
+  flutter_lints: ^1.0.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+   - assets/images/title.png
+   - assets/images/bg.png
+   - assets/images/waiting.png
+   - assets/images/post.jpg
+   - assets/images/post2.jpg
+   - assets/images/pp.jpg
+   - assets/images/pp2.jpg
+
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Regular.ttf
+        - asset: assets/fonts/Nunito-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Nunito-Light.ttf
+        - asset: assets/fonts/Nunito-Italic.ttf
+          style: italic
