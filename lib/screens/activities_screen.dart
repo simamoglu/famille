@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:famille/widgets/custom_card.dart';
+import '../widgets/join_bar.dart';
 
 class ActivitiesScreen extends StatefulWidget {
   const ActivitiesScreen({Key? key}) : super(key: key);
@@ -24,6 +25,9 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          const SizedBox(
+            height: 15,
+          ),
           CustomCard(
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,74 +94,10 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
               ],
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(10),
-            decoration: const BoxDecoration(
-              color: Colors.green,
-              borderRadius: BorderRadius.all(
-                Radius.circular(50),
-              ),
-            ),
-            height: 50,
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                InkWell(
-                  child: Row(
-                    children: const [
-                      Icon(
-                        Icons.close_rounded,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        'Katılmıyorum',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                    ],
-                  ),
-                  onTap: () {},
-                ),
-                const VerticalDivider(
-                  color: Colors.white,
-                  thickness: 2,
-                  width: 1,
-                ),
-                InkWell(
-                  child: Row(
-                    children: const [
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Icon(
-                        Icons.done_rounded,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        'Katılıyorum',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
-                  onTap: () {},
-                ),
-              ],
-            ),
+          const SizedBox(
+            height: 10,
           ),
+          const JoinBar(),
         ],
       ),
     );

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/custom_card.dart';
+import '../widgets/stories.dart';
+import '../widgets/like_bar.dart';
+
 class FeedScreen extends StatefulWidget {
   const FeedScreen({Key? key}) : super(key: key);
 
@@ -23,98 +27,15 @@ class _FeedScreenState extends State<FeedScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Container(
-              decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20),
-                  ),
-                  color: Colors.white),
-              margin: const EdgeInsets.all(15),
-              padding: const EdgeInsets.symmetric(
-                horizontal: 5,
-                vertical: 10,
-              ),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Column(
-                      children: const [
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundImage: AssetImage("assets/images/pp.jpg"),
-                        ),
-                        Text('Hikaye Ekle'),
-                      ],
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      children: const [
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundImage: AssetImage("assets/images/pp2.jpg"),
-                        ),
-                        Text('@moira_esin'),
-                      ],
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      children: const [
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Colors.grey,
-                        ),
-                        Text('@akraba'),
-                      ],
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      children: const [
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Colors.grey,
-                        ),
-                        Text('@akraba2'),
-                      ],
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      children: const [
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Colors.grey,
-                        ),
-                        Text('@akraba3'),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
+            const SizedBox(
+              height: 15,
             ),
-            Container(
-              decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20),
-                  ),
-                  color: Colors.white),
-              margin: const EdgeInsets.only(
-                left: 15,
-                right: 15,
-              ),
-              padding: const EdgeInsets.symmetric(
-                horizontal: 5,
-                vertical: 10,
-              ),
-              child: Column(
+            const Stories(),
+            const SizedBox(
+              height: 15,
+            ),
+            CustomCard(
+              Column(
                 children: [
                   ClipRRect(
                     borderRadius: const BorderRadius.all(
@@ -125,112 +46,94 @@ class _FeedScreenState extends State<FeedScreen> {
                   const Padding(
                     padding: EdgeInsets.all(10),
                     child: Text(
-                        'Yıllar geçse de hala görünce dünmüş gibi hissettiren o fotoğraf. İyi ki varsın ablam.'),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(50),
-                        ),
-                        color: Colors.green),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: const [
-                        Icon(
-                          Icons.thumb_up,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          'Beğendim',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Icon(
-                          Icons.thumb_down_outlined,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          'Beğenmedim',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Icon(
-                          Icons.comment_outlined,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          'Yorum Yap',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
+                        'Yıllar geçse de hala görünce dünmüş gibi hissettiren o fotoğraf. İyi ki varsın ablam. 💛'),
                   ),
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Row(
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: const [
+                LikeBar(),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            CustomCard(
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   const CircleAvatar(
-                    radius: 20,
+                    radius: 25,
                     backgroundImage: AssetImage("assets/images/pp2.jpg"),
                   ),
                   const SizedBox(
-                    width: 20,
+                    width: 10,
                   ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(20),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('@moira_esin'),
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(20),
+                          ),
+                          color: Colors.green,
                         ),
-                        color: Colors.white),
-                    child: const Text('Sen de iyi ki varsın ablam.'),
+                        child: const Text(
+                          'Sen de iyi ki varsın ablam 🧡',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
             ),
+            const SizedBox(
+              height: 15,
+            ),
             Container(
-              decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20),
-                  ),
-                  color: Colors.white),
-              margin: const EdgeInsets.all(15),
+              width: double.infinity,
               padding: const EdgeInsets.symmetric(
-                horizontal: 5,
-                vertical: 10,
+                horizontal: 10,
               ),
-              child: ClipRRect(
+              child: const Divider(
+                color: Colors.white,
+                thickness: 3,
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            CustomCard(
+              ClipRRect(
                 borderRadius: const BorderRadius.all(
                   Radius.circular(20),
                 ),
                 child: Image.asset("assets/images/post2.jpg"),
               ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: const [
+                LikeBar(),
+              ],
+            ),
+            const SizedBox(
+              height: 15,
             ),
           ],
         ),
