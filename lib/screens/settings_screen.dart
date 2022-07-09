@@ -20,6 +20,9 @@ class SettingsScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          const SizedBox(
+            height: 15,
+          ),
           CustomCard(
             SizedBox(
               width: double.infinity,
@@ -142,6 +145,9 @@ class SettingsScreen extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+          const SizedBox(
+            height: 15,
           ),
           CustomCard(
             SizedBox(

@@ -97,7 +97,15 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
           const SizedBox(
             height: 10,
           ),
-          const JoinBar(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: const [
+              JoinBar(),
+              SizedBox(
+                width: 15,
+              ),
+            ],
+          ),
         ],
       ),
     );

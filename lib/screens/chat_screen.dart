@@ -63,7 +63,7 @@ class _ChatScreenState extends State<ChatScreen> {
                             ),
                           ),
                           Text(
-                            'Selam ablam.',
+                            'Selam ablamm 🥰',
                             style: TextStyle(
                               color: Colors.white,
                               // Theme.of(context).accentTextTheme.headline1.color,
@@ -91,9 +91,9 @@ class _ChatScreenState extends State<ChatScreen> {
                   clipBehavior: Clip.none,
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.only(
+                      decoration: BoxDecoration(
+                          color: Theme.of(context).backgroundColor,
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(20.0),
                             bottomRight: Radius.circular(10.0),
                             topLeft: Radius.circular(20.0),
@@ -115,13 +115,13 @@ class _ChatScreenState extends State<ChatScreen> {
                             'Sertan',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Colors.white,
+                              color: Colors.black,
                             ),
                           ),
                           Text(
-                            'Merhaba ablaaa!',
+                            'Merhaba ablaaa 😍',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                             ),
                             textAlign: TextAlign.right,
                           ),

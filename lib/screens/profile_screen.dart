@@ -45,6 +45,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            const SizedBox(
+              height: 15,
+            ),
             CustomCard(
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -185,6 +188,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ],
               ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             const CircleAvatar(
               radius: 10,

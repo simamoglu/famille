@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/custom_card.dart';
 import '../widgets/stories.dart';
 import '../widgets/like_bar.dart';
+import './chat_screen.dart';
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({Key? key}) : super(key: key);
@@ -21,6 +22,25 @@ class _FeedScreenState extends State<FeedScreen> {
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ChatScreen(),
+                ),
+              );
+            },
+            icon: const Icon(
+              Icons.chat_outlined,
+              color: Colors.green,
+            ),
+          ),
+          const SizedBox(
+            width: 5,
+          )
+        ],
       ),
       backgroundColor: Theme.of(context).backgroundColor,
       body: SingleChildScrollView(
@@ -78,7 +98,7 @@ class _FeedScreenState extends State<FeedScreen> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('@moira_esin'),
+                      const Text('@moira_esin'),
                       Container(
                         padding: const EdgeInsets.all(10),
                         decoration: const BoxDecoration(
