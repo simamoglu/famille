@@ -10,6 +10,6 @@ class ActivityDetailsDialog extends StatefulWidget {
 class _ActivityDetailsDialogState extends State<ActivityDetailsDialog> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Dialog();
   }
 }

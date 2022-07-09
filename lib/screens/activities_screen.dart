@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:famille/widgets/custom_card.dart';
+
 class ActivitiesScreen extends StatefulWidget {
   const ActivitiesScreen({Key? key}) : super(key: key);
 
@@ -13,7 +15,7 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Etkinlikler',
+          'Aile ve Etkinlikler',
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
@@ -22,15 +24,8 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
-            decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(20),
-                ),
-                color: Colors.white),
-            margin: const EdgeInsets.all(15),
-            padding: const EdgeInsets.all(5),
-            child: Column(
+          CustomCard(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(
@@ -51,7 +46,7 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
                   ),
                   child: Text(
                     'Sahilde iki aile beraber piknik yapacağız. Gelecek olanlar "Katılıyorum"u işaretlesin lütfen!',
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: Theme.of(context).textTheme.bodyText2,
                   ),
                 ),
                 Padding(

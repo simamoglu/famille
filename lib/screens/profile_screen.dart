@@ -1,5 +1,7 @@
-import 'package:famille/widgets/custom_card.dart';
 import 'package:flutter/material.dart';
+
+import './settings_screen.dart';
+import '../widgets/custom_card.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -17,6 +19,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
           'Hesabım',
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SettingsScreen(),
+                ),
+              );
+            },
+            icon: const Icon(
+              Icons.settings_outlined,
+              color: Colors.green,
+            ),
+          ),
+          const SizedBox(
+            width: 5,
+          )
+        ],
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
       backgroundColor: Theme.of(context).backgroundColor,
@@ -50,7 +71,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             Text(
                               'Sertan Hakkı İmamoğlu',
                               style: TextStyle(
-                                  fontSize: 25,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.green),
                             ),

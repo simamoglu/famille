@@ -42,30 +42,30 @@ class MyApp extends StatelessWidget {
           titleTextStyle: TextStyle(
             color: Colors.green,
             fontWeight: FontWeight.bold,
-            fontSize: 30,
+            fontSize: 23,
             fontFamily: 'Nunito',
           ),
         ),
         textTheme: const TextTheme(
           headline1: TextStyle(
-            fontSize: 35.0,
-            fontFamily: 'Nunito',
-            fontWeight: FontWeight.bold,
-            color: Colors.green,
-          ),
-          headline6: TextStyle(
             fontSize: 25.0,
             fontFamily: 'Nunito',
             fontWeight: FontWeight.bold,
             color: Colors.green,
           ),
+          headline6: TextStyle(
+            fontSize: 20.0,
+            fontFamily: 'Nunito',
+            fontWeight: FontWeight.bold,
+            color: Colors.green,
+          ),
           bodyText1: TextStyle(
-            fontSize: 16.0,
+            fontSize: 10.0,
             fontFamily: 'Nunito',
             fontWeight: FontWeight.normal,
           ),
           bodyText2: TextStyle(
-            fontSize: 18.0,
+            fontSize: 16.0,
             fontFamily: 'Nunito',
             fontWeight: FontWeight.normal,
           ),

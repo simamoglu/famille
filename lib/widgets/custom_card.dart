@@ -8,13 +8,13 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: const EdgeInsets.all(15),
-      elevation: 5,
+      elevation: 1,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
       color: Colors.white,
       child: Padding(
-        padding: const EdgeInsets.all(5),
+        padding: const EdgeInsets.all(10),
         child: cardChild,
       ),
     );
