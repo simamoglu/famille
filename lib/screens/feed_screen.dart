@@ -25,12 +25,60 @@ class _FeedScreenState extends State<FeedScreen> {
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
-        leading: IconButton(
-          onPressed: () {},
+        leading: PopupMenuButton(
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(15),
+            ),
+          ),
           icon: const Icon(
-            Icons.camera_alt_outlined,
+            Icons.add_circle_outline,
             color: Colors.green,
           ),
+          itemBuilder: (context) {
+            return [
+              PopupMenuItem(
+                value: 'camera',
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.camera_alt_outlined,
+                      color: Colors.green,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'Kameradan Çek',
+                      style: Theme.of(context).textTheme.bodyText2,
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem(
+                value: 'gallery',
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.photo_outlined,
+                      color: Colors.green,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'Galeriden Seç',
+                      style: Theme.of(context).textTheme.bodyText2,
+                    ),
+                  ],
+                ),
+              ),
+            ];
+          },
+          onSelected: (value) {
+            if (value == 'camera') {
+            } else if (value == 'gallery') {}
+          },
         ),
         actions: [
           IconButton(

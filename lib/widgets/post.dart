@@ -11,7 +11,7 @@ class Post extends StatelessWidget {
       Column(
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const CircleAvatar(
                 radius: 20,
