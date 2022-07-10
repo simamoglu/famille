@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+
 import 'feed_screen.dart';
 import 'search_screen.dart';
 import 'activities_screen.dart';
@@ -24,52 +26,75 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
+      backgroundColor: Colors.white,
       body: _pages[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: SalomonBottomBar(
+        unselectedItemColor: Colors.green,
+        margin: const EdgeInsets.all(10),
+        curve: Curves.ease,
+        currentIndex: _selectedIndex,
+        onTap: (index) => setState(() => _selectedIndex = index),
         items: [
-          BottomNavigationBarItem(
-            icon: Icon(
-              _selectedIndex == 0 ? Icons.home : Icons.home_outlined,
-              size: 30,
+          /// Home
+          SalomonBottomBarItem(
+            icon: const Icon(
+              Icons.home_outlined,
             ),
-            label: 'Ana Sayfa',
+            title: const Text(
+              'Ana Sayfa',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Nunito',
+              ),
+            ),
+            selectedColor: Colors.green,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              _selectedIndex == 1 ? Icons.search : Icons.search_outlined,
-              size: 30,
+
+          /// Likes
+          SalomonBottomBarItem(
+            icon: const Icon(
+              Icons.search_outlined,
             ),
-            label: 'Ara',
+            title: const Text(
+              'Ara',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Nunito',
+              ),
+            ),
+            selectedColor: Colors.green,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              _selectedIndex == 2
-                  ? Icons.supervised_user_circle
-                  : Icons.supervised_user_circle_outlined,
-              size: 30,
+
+          /// Search
+          SalomonBottomBarItem(
+            icon: const Icon(
+              Icons.group_outlined,
             ),
-            label: 'Aile',
+            title: const Text(
+              'Aile',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Nunito',
+              ),
+            ),
+            selectedColor: Colors.green,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              _selectedIndex == 3
-                  ? Icons.account_circle
-                  : Icons.account_circle_outlined,
-              size: 30,
+
+          /// Profile
+          SalomonBottomBarItem(
+            icon: const Icon(
+              Icons.person_outline,
             ),
-            label: 'Ben',
+            title: const Text(
+              'Ben',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Nunito',
+              ),
+            ),
+            selectedColor: Colors.green,
           ),
         ],
-        showUnselectedLabels: false,
-        unselectedItemColor: Colors.black87,
-        selectedItemColor: Colors.green,
-        currentIndex: _selectedIndex,
-        onTap: (int index) {
-          setState(() {
-            _selectedIndex = index;
-          });
-        },
       ),
     );
   }
