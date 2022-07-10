@@ -12,6 +12,7 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'Ara',
           style: Theme.of(context).appBarTheme.titleTextStyle,

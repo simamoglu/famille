@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './settings_screen.dart';
+import './bookmarks_screen.dart';
 import '../widgets/about_me.dart';
 import '../widgets/post.dart';
 import '../widgets/comments.dart';
@@ -17,9 +18,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'Hesabım',
           style: Theme.of(context).appBarTheme.titleTextStyle,
+        ),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const BookmarksScreen(),
+              ),
+            );
+          },
+          icon: const Icon(
+            Icons.bookmarks_outlined,
+            color: Colors.green,
+          ),
         ),
         actions: [
           IconButton(
@@ -38,7 +54,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
           const SizedBox(
             width: 5,
-          )
+          ),
         ],
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),

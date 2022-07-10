@@ -23,17 +23,8 @@ class LikeBar extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(
-              Icons.thumb_up,
-              color: Colors.white,
-            ),
-            onPressed: () {},
-          ),
-          const SizedBox(
-            width: 5,
-          ),
-          IconButton(
-            icon: const Icon(
-              Icons.thumb_down_outlined,
+              Icons.thumb_up_outlined,
+              //thump_up
               color: Colors.white,
             ),
             onPressed: () {},
@@ -44,6 +35,17 @@ class LikeBar extends StatelessWidget {
           IconButton(
             icon: const Icon(
               Icons.comment_outlined,
+              color: Colors.white,
+            ),
+            onPressed: () {},
+          ),
+          const SizedBox(
+            width: 5,
+          ),
+          IconButton(
+            icon: const Icon(
+              Icons.bookmark_add_rounded,
+              //bookmark_add_rounded
               color: Colors.white,
             ),
             onPressed: () {},

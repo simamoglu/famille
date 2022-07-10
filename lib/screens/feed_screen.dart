@@ -19,11 +19,19 @@ class _FeedScreenState extends State<FeedScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'Ağİle',
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.camera_alt_outlined,
+            color: Colors.green,
+          ),
+        ),
         actions: [
           IconButton(
             onPressed: () {

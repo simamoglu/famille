@@ -12,6 +12,12 @@ class ChatsListScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_rounded,
+          ),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         title: Text(
           'Mesajlarım',
@@ -38,7 +44,7 @@ class ChatsListScreen extends StatelessWidget {
                   },
                 ),
                 const Divider(
-                  color: Colors.black,
+                  color: Colors.grey,
                 ),
                 InkWell(
                   child: const ChatListItem(),

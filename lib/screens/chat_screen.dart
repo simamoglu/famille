@@ -12,6 +12,13 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_rounded,
+            color: Colors.green,
+          ),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         title: Text(
           '@moira_esin',
           style: Theme.of(context).appBarTheme.titleTextStyle,

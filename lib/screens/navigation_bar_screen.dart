@@ -49,7 +49,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                   : Icons.supervised_user_circle_outlined,
               size: 30,
             ),
-            label: 'Aile',
+            label: 'Etkinlikler',
           ),
           BottomNavigationBarItem(
             icon: Icon(
