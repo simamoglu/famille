@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import './custom_card.dart';
+import './custom_colorful_card.dart';
 
 class Stories extends StatelessWidget {
   const Stories({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return CustomCard(
+    return CustomColorfulCard(
       SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
@@ -17,17 +17,12 @@ class Stories extends StatelessWidget {
               children: const [
                 CircleAvatar(
                   radius: 30,
-                  backgroundColor: Colors.green,
-                  child: IconButton(
-                    onPressed: null,
-                    icon: Icon(
-                      Icons.add_circle_outline,
-                      color: Colors.white,
-                      size: 30,
-                    ),
-                  ),
+                  backgroundImage: AssetImage("assets/images/pp.jpg"),
                 ),
-                Text('Hikaye Ekle'),
+                Text(
+                  '@srtn_immgl',
+                  style: TextStyle(color: Colors.white),
+                ),
               ],
             ),
             const SizedBox(
@@ -39,7 +34,10 @@ class Stories extends StatelessWidget {
                   radius: 30,
                   backgroundImage: AssetImage("assets/images/pp2.jpg"),
                 ),
-                Text('@moira_esin'),
+                Text(
+                  '@moira_esin',
+                  style: TextStyle(color: Colors.white),
+                ),
               ],
             ),
             const SizedBox(
@@ -51,7 +49,10 @@ class Stories extends StatelessWidget {
                   radius: 30,
                   backgroundColor: Colors.grey,
                 ),
-                Text('@akraba'),
+                Text(
+                  '@akraba',
+                  style: TextStyle(color: Colors.white),
+                ),
               ],
             ),
             const SizedBox(
@@ -63,7 +64,10 @@ class Stories extends StatelessWidget {
                   radius: 30,
                   backgroundColor: Colors.grey,
                 ),
-                Text('@akraba2'),
+                Text(
+                  '@akraba2',
+                  style: TextStyle(color: Colors.white),
+                ),
               ],
             ),
             const SizedBox(
@@ -75,7 +79,10 @@ class Stories extends StatelessWidget {
                   radius: 30,
                   backgroundColor: Colors.grey,
                 ),
-                Text('@akraba3'),
+                Text(
+                  '@akraba3',
+                  style: TextStyle(color: Colors.white),
+                ),
               ],
             ),
           ],

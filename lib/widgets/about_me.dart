@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import './custom_card.dart';
+import 'custom_colorful_card.dart';
 
 class AboutMe extends StatelessWidget {
   const AboutMe({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return CustomCard(
+    return CustomColorfulCard(
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,24 +25,24 @@ class AboutMe extends StatelessWidget {
                   backgroundImage: AssetImage("assets/images/pp.jpg"),
                 ),
                 const SizedBox(
-                  width: 5,
+                  width: 15,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Text(
-                      'Sertan Hakkı İmamoğlu',
+                      'Sertan Hakkı',
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.green),
+                          color: Colors.white),
                     ),
                     Text(
-                      '@srtn_immgl',
+                      'İmamoğlu',
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black),
+                          color: Colors.white),
                     ),
                   ],
                 ),
@@ -57,7 +57,11 @@ class AboutMe extends StatelessWidget {
               horizontal: 10,
             ),
             child: Text(
-                'Bilişim dersinden projem var, onun için bir mobil uygulama geliştiriyorum ve tasarlıyorum.'),
+              'Bilişim dersinden projem var, onun için bir mobil uygulama geliştiriyorum ve tasarlıyorum.',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(20.0),
@@ -65,79 +69,64 @@ class AboutMe extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Column(
-                  children: [
-                    Row(
-                      children: const [
-                        Icon(
-                          Icons.view_list_outlined,
-                          color: Colors.green,
-                        ),
-                        Text(
-                          'Gönderi',
-                          style: TextStyle(
-                            color: Colors.green,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
+                  children: const [
+                    CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: Icon(
+                        Icons.view_list_outlined,
+                        color: Colors.green,
+                      ),
                     ),
-                    const Text(
-                      '1',
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      '1 Gönderi',
                       style: TextStyle(
                         fontSize: 16,
+                        color: Colors.white,
                       ),
                     ),
                   ],
                 ),
                 Column(
-                  children: [
-                    Row(
-                      children: const [
-                        Icon(
-                          Icons.person_outline,
-                          color: Colors.green,
-                        ),
-                        Text(
-                          'Arkadaşlar',
-                          style: TextStyle(
-                            color: Colors.green,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
+                  children: const [
+                    CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: Icon(
+                        Icons.person_outline,
+                        color: Colors.green,
+                      ),
                     ),
-                    const Text(
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
                       '48',
                       style: TextStyle(
                         fontSize: 16,
+                        color: Colors.white,
                       ),
                     ),
                   ],
                 ),
                 Column(
-                  children: [
-                    Row(
-                      children: const [
-                        Icon(
-                          Icons.location_on_outlined,
-                          color: Colors.green,
-                        ),
-                        Text(
-                          'Adres',
-                          style: TextStyle(
-                            color: Colors.green,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
+                  children: const [
+                    CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: Icon(
+                        Icons.location_on_outlined,
+                        color: Colors.green,
+                      ),
                     ),
-                    const Text(
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
                       'Gebze',
                       style: TextStyle(
                         fontSize: 16,
+                        color: Colors.white,
                       ),
                     ),
                   ],

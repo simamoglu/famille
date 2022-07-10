@@ -4,7 +4,7 @@ import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 import 'feed_screen.dart';
 import 'search_screen.dart';
-import 'activities_screen.dart';
+import 'family_screen.dart';
 import 'profile_screen.dart';
 
 class NavigationBarScreen extends StatefulWidget {
@@ -18,7 +18,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   final List _pages = [
     const FeedScreen(),
     const SearchScreen(),
-    const ActivitiesScreen(),
+    const FamilyScreen(),
     const ProfileScreen(),
   ];
   int _selectedIndex = 0;
@@ -29,7 +29,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
       backgroundColor: Colors.white,
       body: _pages[_selectedIndex],
       bottomNavigationBar: SalomonBottomBar(
-        unselectedItemColor: Colors.green,
+        unselectedItemColor: Colors.black,
         margin: const EdgeInsets.all(10),
         curve: Curves.ease,
         currentIndex: _selectedIndex,

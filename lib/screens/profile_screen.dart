@@ -20,7 +20,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Hesabım',
+          '@srtn_immgl',
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
         leading: IconButton(
@@ -67,13 +67,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
               height: 15,
             ),
             AboutMe(),
-            SizedBox(
-              height: 10,
-            ),
-            CircleAvatar(
-              radius: 10,
-              backgroundColor: Colors.white,
-            ),
             SizedBox(
               height: 10,
             ),
