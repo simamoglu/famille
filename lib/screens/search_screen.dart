@@ -81,7 +81,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 ),
                 color: Colors.white),
             margin: const EdgeInsets.all(15),
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(20),
             width: double.infinity,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

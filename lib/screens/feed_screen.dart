@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../widgets/custom_card.dart';
 import '../widgets/stories.dart';
 import '../widgets/like_bar.dart';
-import './chat_screen.dart';
+import '../widgets/post.dart';
+import '../widgets/comments.dart';
+import './chats_list_screen.dart';
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({Key? key}) : super(key: key);
@@ -28,7 +30,7 @@ class _FeedScreenState extends State<FeedScreen> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const ChatScreen(),
+                  builder: (context) => const ChatsListScreen(),
                 ),
               );
             },
@@ -54,23 +56,7 @@ class _FeedScreenState extends State<FeedScreen> {
             const SizedBox(
               height: 15,
             ),
-            CustomCard(
-              Column(
-                children: [
-                  ClipRRect(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(20),
-                    ),
-                    child: Image.asset("assets/images/post.jpg"),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                        'Yıllar geçse de hala görünce dünmüş gibi hissettiren o fotoğraf. İyi ki varsın ablam. 💛'),
-                  ),
-                ],
-              ),
-            ),
+            const Post(),
             const SizedBox(
               height: 10,
             ),
@@ -83,42 +69,7 @@ class _FeedScreenState extends State<FeedScreen> {
             const SizedBox(
               height: 10,
             ),
-            CustomCard(
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const CircleAvatar(
-                    radius: 25,
-                    backgroundImage: AssetImage("assets/images/pp2.jpg"),
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text('@moira_esin'),
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20),
-                          ),
-                          color: Colors.green,
-                        ),
-                        child: const Text(
-                          'Sen de iyi ki varsın ablam 🧡',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            const Comments(),
             const SizedBox(
               height: 15,
             ),
