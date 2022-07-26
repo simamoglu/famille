@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:famille/custom_icons.dart';
+
 class LikeBar extends StatelessWidget {
   const LikeBar({Key? key}) : super(key: key);
 
@@ -23,7 +25,7 @@ class LikeBar extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(
-              Icons.thumb_up_outlined,
+              FamilleIcons.like,
               //thump_up
               color: Colors.white,
             ),
@@ -34,7 +36,7 @@ class LikeBar extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(
-              Icons.comment_outlined,
+              FamilleIcons.comment,
               color: Colors.white,
             ),
             onPressed: () {},
@@ -44,8 +46,7 @@ class LikeBar extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(
-              Icons.bookmark_add_rounded,
-              //bookmark_add_rounded
+              FamilleIcons.bookmark,
               color: Colors.white,
             ),
             onPressed: () {},

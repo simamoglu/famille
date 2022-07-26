@@ -8,7 +8,7 @@ class ToDoListScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(15),
       child: Column(
-        children: [Text('mrb')],
+        children: const [Text('mrb')],
       ),
     );
   }

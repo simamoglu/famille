@@ -4,5 +4,37 @@
     "search": "Ara",
     "family": "Aile",
     "me": "Ben",
-    "searchHistory": "Arama Geçmişi:"
+
+    "camera": "Kamera",
+    "gallery": "Galeri",
+
+    "chats": "Mesajlar",
+
+    "searchHistory": "Arama Geçmişi:",
+
+    "activities": "Aktiviteler",
+    "attending": "Katılıyorum",
+    "notAttending": "Katılmıyorum",
+    "lists": "Listeler",
+    "albums": "Albümler",
+
+    "bookmarks": "Kaydedilenlerim",
+    "alphabetical": "Alfabetik",
+    "byDate": "Tarihe Göre",
+
+    "settings": "Ayarlar",
+    
+    "account": "Hesap Ayarları",
+    "theme": "Tema Ayarları",
+    "app": "Uygulama Ayarları",
+    "donate": "Bağış",
+    "about": "Hakkında",
+
+    "accountHint": "Email veya şifre gibi hesap bilgilerinizi düzenleyin.",
+    "themeHint": "Uygulama temasının açık veya koyu olması, mesaj arkaplanının seçili resim olması gibi ayarları düzenleyin.",
+    "appHint": "Uygulama bildirimlerini veya dilini değiştirmek için seçiniz.",
+    "donateHint": "Geliştiriciye bağış yaparak destekte bulun.",
+    "aboutHint": "Uygulama versiyonu ve geliştiricisi hakkında daha çok bilgi edinin.",
+
+    "deleteAccount": "Hesabımı Sil"
 }

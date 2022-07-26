@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:famille/custom_icons.dart';
+
 import 'custom_colorful_card.dart';
 
 class AboutMe extends StatelessWidget {
@@ -66,14 +68,14 @@ class AboutMe extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
                   children: const [
                     CircleAvatar(
                       backgroundColor: Colors.white,
                       child: Icon(
-                        Icons.view_list_outlined,
+                        FamilleIcons.apps,
                         color: Colors.green,
                       ),
                     ),
@@ -94,7 +96,7 @@ class AboutMe extends StatelessWidget {
                     CircleAvatar(
                       backgroundColor: Colors.white,
                       child: Icon(
-                        Icons.person_outline,
+                        FamilleIcons.user,
                         color: Colors.green,
                       ),
                     ),
@@ -115,7 +117,7 @@ class AboutMe extends StatelessWidget {
                     CircleAvatar(
                       backgroundColor: Colors.white,
                       child: Icon(
-                        Icons.location_on_outlined,
+                        FamilleIcons.location,
                         color: Colors.green,
                       ),
                     ),

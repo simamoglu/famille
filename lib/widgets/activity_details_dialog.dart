@@ -12,11 +12,11 @@ class _ActivityDetailsDialogState extends State<ActivityDetailsDialog> {
   Widget build(BuildContext context) {
     return Dialog(
       child: Container(
-        margin: EdgeInsets.all(20),
-        padding: EdgeInsets.all(15),
+        margin: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: const [
             Text('data'),
             Text('data2'),
           ],

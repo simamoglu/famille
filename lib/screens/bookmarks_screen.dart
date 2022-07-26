@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:famille/custom_icons.dart';
+
 class BookmarksScreen extends StatelessWidget {
   const BookmarksScreen({Key? key}) : super(key: key);
 
@@ -11,13 +14,13 @@ class BookmarksScreen extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(
-            Icons.arrow_back_ios_rounded,
+            FamilleIcons.angle_left,
           ),
           onPressed: () => Navigator.of(context).pop(),
         ),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         title: Text(
-          'Kaydedilenlerim',
+          AppLocalizations.of(context).bookmarks,
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
         actions: [
@@ -28,7 +31,7 @@ class BookmarksScreen extends StatelessWidget {
               ),
             ),
             icon: const Icon(
-              Icons.sort_outlined,
+              FamilleIcons.filter,
               color: Colors.green,
             ),
             itemBuilder: (context) {
@@ -45,7 +48,7 @@ class BookmarksScreen extends StatelessWidget {
                         width: 10,
                       ),
                       Text(
-                        "A'dan Z'ye",
+                        AppLocalizations.of(context).alphabetical,
                         style: Theme.of(context).textTheme.bodyText2,
                       ),
                     ],
@@ -63,7 +66,7 @@ class BookmarksScreen extends StatelessWidget {
                         width: 10,
                       ),
                       Text(
-                        'Son Eklenen',
+                        AppLocalizations.of(context).byDate,
                         style: Theme.of(context).textTheme.bodyText2,
                       ),
                     ],

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:famille/custom_icons.dart';
 
 import '../widgets/custom_card.dart';
 import '../widgets/stories.dart';
 import '../widgets/like_bar.dart';
 import '../widgets/post.dart';
-import '../widgets/comments.dart';
 import './chats_list_screen.dart';
 
 class FeedScreen extends StatefulWidget {
@@ -34,7 +34,8 @@ class _FeedScreenState extends State<FeedScreen> {
             ),
           ),
           icon: const Icon(
-            Icons.add_circle_outline,
+            FamilleIcons.add,
+            size: 20,
             color: Colors.green,
           ),
           itemBuilder: (context) {
@@ -44,14 +45,14 @@ class _FeedScreenState extends State<FeedScreen> {
                 child: Row(
                   children: [
                     const Icon(
-                      Icons.camera_alt_outlined,
+                      FamilleIcons.camera,
                       color: Colors.green,
                     ),
                     const SizedBox(
                       width: 10,
                     ),
                     Text(
-                      'Kameradan Çek',
+                      AppLocalizations.of(context).camera,
                       style: Theme.of(context).textTheme.bodyText2,
                     ),
                   ],
@@ -62,14 +63,14 @@ class _FeedScreenState extends State<FeedScreen> {
                 child: Row(
                   children: [
                     const Icon(
-                      Icons.photo_outlined,
+                      FamilleIcons.picture,
                       color: Colors.green,
                     ),
                     const SizedBox(
                       width: 10,
                     ),
                     Text(
-                      'Galeriden Seç',
+                      AppLocalizations.of(context).gallery,
                       style: Theme.of(context).textTheme.bodyText2,
                     ),
                   ],
@@ -93,13 +94,14 @@ class _FeedScreenState extends State<FeedScreen> {
               );
             },
             icon: const Icon(
-              Icons.chat_outlined,
+              FamilleIcons.chats,
+              size: 20,
               color: Colors.green,
             ),
           ),
           const SizedBox(
             width: 5,
-          )
+          ),
         ],
       ),
       backgroundColor: Theme.of(context).backgroundColor,
@@ -115,19 +117,6 @@ class _FeedScreenState extends State<FeedScreen> {
               height: 15,
             ),
             const Post(),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: const [
-                LikeBar(),
-              ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const Comments(),
             const SizedBox(
               height: 15,
             ),

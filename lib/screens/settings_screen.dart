@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:famille/custom_icons.dart';
+
 import '../widgets/custom_card.dart';
 
 import 'settings_screens/profile_settings_screen.dart';
+import 'settings_screens/about_screen.dart';
+import 'settings_screens/app_settings_screen.dart';
+import 'settings_screens/donation_screen.dart';
+import 'settings_screens/theme_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);
@@ -15,12 +22,12 @@ class SettingsScreen extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(
-            Icons.arrow_back_ios_rounded,
+            FamilleIcons.angle_left,
           ),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          'Ayarlar',
+          AppLocalizations.of(context).settings,
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
       ),
@@ -31,209 +38,241 @@ class SettingsScreen extends StatelessWidget {
             height: 15,
           ),
           CustomCard(
-            SizedBox(
-              width: double.infinity,
-              child: Column(
-                children: [
-                  InkWell(
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          const Icon(
-                            Icons.person_outline,
-                            color: Colors.green,
-                            size: 30,
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Hesap',
-                                style: Theme.of(context).textTheme.headline6,
-                              ),
-                              Text(
-                                'Email veya şifre gibi hesap bilgilerinizi düzenleyin.',
-                                maxLines: 3,
-                                overflow: TextOverflow.ellipsis,
-                                style: Theme.of(context).textTheme.bodyText2,
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const ProfileSettingsScreen(),
+            Column(
+              children: [
+                InkWell(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        const Icon(
+                          FamilleIcons.user,
+                          color: Colors.green,
+                          size: 30,
                         ),
-                      );
-                    },
-                  ),
-                  const Divider(),
-                  InkWell(
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          const Icon(
-                            Icons.palette_outlined,
-                            color: Colors.green,
-                            size: 30,
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Column(
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Tema',
+                                AppLocalizations.of(context).account,
                                 style: Theme.of(context).textTheme.headline6,
                               ),
                               Text(
-                                'Uygulama temasının açık veya koyu olması, mesaj arkaplanının seçili resim olması gibi ayarları düzenleyin.',
+                                AppLocalizations.of(context).accountHint,
                                 maxLines: 3,
                                 overflow: TextOverflow.ellipsis,
                                 style: Theme.of(context).textTheme.bodyText2,
                               ),
                             ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                    onTap: () {},
                   ),
-                  const Divider(),
-                  InkWell(
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          const Icon(
-                            Icons.app_registration_outlined,
-                            color: Colors.green,
-                            size: 30,
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Column(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ProfileSettingsScreen(),
+                      ),
+                    );
+                  },
+                ),
+                const Divider(),
+                InkWell(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        const Icon(
+                          FamilleIcons.palette,
+                          color: Colors.green,
+                          size: 30,
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Uygulama Ayarları',
+                                AppLocalizations.of(context).theme,
                                 style: Theme.of(context).textTheme.headline6,
                               ),
                               Text(
-                                'Uygulama bildirimlerini veya dilini değiştirmek için seçiniz.',
+                                AppLocalizations.of(context).themeHint,
                                 maxLines: 3,
                                 overflow: TextOverflow.ellipsis,
                                 style: Theme.of(context).textTheme.bodyText2,
                               ),
                             ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                    onTap: () {},
                   ),
-                ],
-              ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ThemeScreen(),
+                      ),
+                    );
+                  },
+                ),
+                const Divider(),
+                InkWell(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        const Icon(
+                          FamilleIcons.settings_sliders,
+                          color: Colors.green,
+                          size: 30,
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                AppLocalizations.of(context).app,
+                                style: Theme.of(context).textTheme.headline6,
+                              ),
+                              Text(
+                                AppLocalizations.of(context).appHint,
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                style: Theme.of(context).textTheme.bodyText2,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AppSettingsScreen(),
+                      ),
+                    );
+                  },
+                ),
+              ],
             ),
           ),
           const SizedBox(
             height: 15,
           ),
           CustomCard(
-            SizedBox(
-              width: double.infinity,
-              child: Column(
-                children: [
-                  InkWell(
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          const Icon(
-                            Icons.monetization_on_outlined,
-                            color: Colors.green,
-                            size: 30,
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Column(
+            Column(
+              children: [
+                InkWell(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        const Icon(
+                          FamilleIcons.donate,
+                          color: Colors.green,
+                          size: 30,
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Bağış',
+                                AppLocalizations.of(context).donate,
                                 style: Theme.of(context).textTheme.headline6,
                               ),
                               Text(
-                                'Geliştiriciye bağış yaparak destekte bulun.',
+                                AppLocalizations.of(context).donateHint,
                                 maxLines: 3,
                                 overflow: TextOverflow.ellipsis,
                                 style: Theme.of(context).textTheme.bodyText2,
                               ),
                             ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                    onTap: () {},
                   ),
-                  const Divider(),
-                  InkWell(
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          const Icon(
-                            Icons.info_outlined,
-                            color: Colors.green,
-                            size: 30,
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Column(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DonationScreen(),
+                      ),
+                    );
+                  },
+                ),
+                const Divider(),
+                InkWell(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        const Icon(
+                          FamilleIcons.info,
+                          color: Colors.green,
+                          size: 30,
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Hakkında',
+                                AppLocalizations.of(context).about,
                                 style: Theme.of(context).textTheme.headline6,
                               ),
                               Text(
-                                'Uygulama versiyonu ve geliştiricisi hakkında.',
+                                AppLocalizations.of(context).aboutHint,
                                 maxLines: 3,
                                 overflow: TextOverflow.ellipsis,
                                 style: Theme.of(context).textTheme.bodyText2,
                               ),
                             ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                    onTap: () {},
                   ),
-                ],
-              ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AboutScreen(),
+                      ),
+                    );
+                  },
+                ),
+              ],
             ),
           ),
         ],

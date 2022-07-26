@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:famille/custom_icons.dart';
+
 class ProfileSettingsScreen extends StatelessWidget {
   const ProfileSettingsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(
-            Icons.arrow_back_ios_rounded,
+            FamilleIcons.angle_left,
           ),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text('Hesap Ayarları'),
+        title: Text(AppLocalizations.of(context).account),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -30,17 +34,17 @@ class ProfileSettingsScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(
-                        Icons.delete_outline,
+                    children: [
+                      const Icon(
+                        FamilleIcons.trash,
                         color: Colors.white,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       Text(
-                        'Hesabımı Sil',
-                        style: TextStyle(
+                        AppLocalizations.of(context).deleteAccount,
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                         ),

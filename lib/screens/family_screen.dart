@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:famille/custom_icons.dart';
+
 import 'activities_screen.dart';
 import 'todo_list_screen.dart';
 import 'shopping_list_screen.dart';
@@ -22,21 +25,21 @@ class _FamilyScreenState extends State<FamilyScreen> {
           elevation: 1,
           centerTitle: true,
           title: Text(
-            'Aile',
+            AppLocalizations.of(context).family,
             style: Theme.of(context).appBarTheme.titleTextStyle,
           ),
-          bottom: const TabBar(
+          bottom: TabBar(
             indicatorSize: TabBarIndicatorSize.label,
             indicatorColor: Colors.green,
             labelColor: Colors.green,
             unselectedLabelColor: Colors.black,
-            unselectedLabelStyle: TextStyle(
+            unselectedLabelStyle: const TextStyle(
               color: Colors.green,
               fontWeight: FontWeight.normal,
               fontSize: 16,
               fontFamily: 'Nunito',
             ),
-            labelStyle: TextStyle(
+            labelStyle: const TextStyle(
               color: Colors.green,
               fontWeight: FontWeight.bold,
               fontSize: 16,
@@ -44,13 +47,13 @@ class _FamilyScreenState extends State<FamilyScreen> {
             ),
             tabs: [
               Tab(
-                text: 'Etkinlikler',
+                text: AppLocalizations.of(context).activities,
               ),
               Tab(
-                text: 'Listeler',
+                text: AppLocalizations.of(context).lists,
               ),
               Tab(
-                text: 'Albümler',
+                text: AppLocalizations.of(context).albums,
               ),
             ],
           ),

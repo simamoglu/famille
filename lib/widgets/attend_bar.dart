@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
-class JoinBar extends StatelessWidget {
-  const JoinBar({Key? key}) : super(key: key);
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:famille/custom_icons.dart';
+
+class AttendBar extends StatelessWidget {
+  const AttendBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,22 +24,23 @@ class JoinBar extends StatelessWidget {
         children: [
           InkWell(
             child: Row(
-              children: const [
-                Icon(
-                  Icons.close_rounded,
+              children: [
+                const Icon(
+                  FamilleIcons.cross,
+                  size: 16,
                   color: Colors.white,
                 ),
-                SizedBox(
-                  width: 5,
+                const SizedBox(
+                  width: 10,
                 ),
                 Text(
-                  'Katılmıyorum',
-                  style: TextStyle(
+                  AppLocalizations.of(context).notAttending,
+                  style: const TextStyle(
                     color: Colors.white,
                   ),
                 ),
-                SizedBox(
-                  width: 5,
+                const SizedBox(
+                  width: 10,
                 ),
               ],
             ),
@@ -49,20 +53,21 @@ class JoinBar extends StatelessWidget {
           ),
           InkWell(
             child: Row(
-              children: const [
-                SizedBox(
-                  width: 5,
+              children: [
+                const SizedBox(
+                  width: 10,
                 ),
-                Icon(
-                  Icons.done_rounded,
+                const Icon(
+                  FamilleIcons.check,
+                  size: 16,
                   color: Colors.white,
                 ),
-                SizedBox(
-                  width: 5,
+                const SizedBox(
+                  width: 15,
                 ),
                 Text(
-                  'Katılıyorum',
-                  style: TextStyle(
+                  AppLocalizations.of(context).attending,
+                  style: const TextStyle(
                     color: Colors.white,
                   ),
                 ),

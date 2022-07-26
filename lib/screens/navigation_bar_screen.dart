@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:famille/custom_icons.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'feed_screen.dart';
@@ -39,7 +40,8 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
           /// Home
           SalomonBottomBarItem(
             icon: const Icon(
-              Icons.home_outlined,
+              FamilleIcons.home,
+              size: 20,
             ),
             title: Text(
               AppLocalizations.of(context).homePage,
@@ -54,7 +56,8 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
           /// Likes
           SalomonBottomBarItem(
             icon: const Icon(
-              Icons.search_outlined,
+              FamilleIcons.search,
+              size: 20,
             ),
             title: Text(
               AppLocalizations.of(context).search,
@@ -69,7 +72,8 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
           /// Search
           SalomonBottomBarItem(
             icon: const Icon(
-              Icons.group_outlined,
+              FamilleIcons.family,
+              size: 20,
             ),
             title: Text(
               AppLocalizations.of(context).family,
@@ -84,7 +88,8 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
           /// Profile
           SalomonBottomBarItem(
             icon: const Icon(
-              Icons.person_outline,
+              FamilleIcons.user,
+              size: 20,
             ),
             title: Text(
               AppLocalizations.of(context).me,

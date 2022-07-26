@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'package:famille/custom_icons.dart';
+
 import './settings_screen.dart';
 import './bookmarks_screen.dart';
 import '../widgets/about_me.dart';
 import '../widgets/post.dart';
-import '../widgets/comments.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -19,9 +20,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          '@srtn_immgl',
-          style: Theme.of(context).appBarTheme.titleTextStyle,
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(
+              FamilleIcons.at,
+            ),
+            const SizedBox(
+              width: 5,
+            ),
+            Text(
+              'srtn_immgl',
+              style: Theme.of(context).appBarTheme.titleTextStyle,
+            ),
+          ],
         ),
         leading: IconButton(
           onPressed: () {
@@ -33,7 +45,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             );
           },
           icon: const Icon(
-            Icons.bookmarks_outlined,
+            FamilleIcons.bookmark,
             color: Colors.green,
           ),
         ),
@@ -48,7 +60,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               );
             },
             icon: const Icon(
-              Icons.settings_outlined,
+              FamilleIcons.settings,
               color: Colors.green,
             ),
           ),
@@ -71,10 +83,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
               height: 10,
             ),
             Post(),
-            SizedBox(
-              height: 10,
-            ),
-            Comments(),
             SizedBox(
               height: 15,
             ),

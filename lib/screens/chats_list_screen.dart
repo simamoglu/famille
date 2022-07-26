@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:famille/custom_icons.dart';
+
 import '../widgets/custom_card.dart';
 import '../widgets/chat_list_item.dart';
 import './chat_screen.dart';
@@ -14,15 +17,27 @@ class ChatsListScreen extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(
-            Icons.arrow_back_ios_rounded,
+            FamilleIcons.angle_left,
           ),
           onPressed: () => Navigator.of(context).pop(),
         ),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         title: Text(
-          'Mesajlarım',
+          AppLocalizations.of(context).chats,
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              FamilleIcons.add,
+              color: Colors.green,
+            ),
+          ),
+          const SizedBox(
+            width: 5,
+          ),
+        ],
       ),
       body: ListView(
         children: [

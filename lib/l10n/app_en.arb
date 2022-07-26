@@ -4,5 +4,37 @@
     "search": "Search",
     "family": "Family",
     "me": "Me",
-    "searchHistory": "Search History:"
+
+    "camera": "Camera",
+    "gallery": "Gallery",
+
+    "chats": "Chats",
+
+    "searchHistory": "Search History:",
+
+    "activities": "Activities",
+    "attending": "Attending",
+    "notAttending": "Not Attending",
+    "lists": "Lists",
+    "albums": "Albums",
+
+    "bookmarks": "My Bookmarks",
+    "alphabetical": "Alphabetical",
+    "byDate": "By Date",
+
+    "settings": "Settings",
+
+    "account": "Account Settings",
+    "theme": "Theme Settings",
+    "app": "App Settings",
+    "donate": "Donate",
+    "about": "About",
+
+    "accountHint": "Edit account settings like email or password of your account.",
+    "themeHint": "Choose between app themes like light or dark, or even choose an image background for chats.",
+    "appHint": "Change app notifications or app language.",
+    "donateHint": "Support the developer by donating.",
+    "aboutHint": "Learn more about both the app version and the developer.",
+
+    "deleteAccount": "Delete My Account"
 }

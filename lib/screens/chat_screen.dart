@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:famille/custom_icons.dart';
+
 class ChatScreen extends StatefulWidget {
   const ChatScreen({Key? key}) : super(key: key);
 
@@ -14,13 +16,13 @@ class _ChatScreenState extends State<ChatScreen> {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(
-            Icons.arrow_back_ios_rounded,
+            FamilleIcons.angle_left,
             color: Colors.green,
           ),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          '@moira_esin',
+          'Ablam',
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
@@ -179,14 +181,14 @@ class _ChatScreenState extends State<ChatScreen> {
                       onPressed: () {},
                       color: Theme.of(context).primaryColor,
                       icon: const Icon(
-                        Icons.attach_file_outlined,
+                        FamilleIcons.clip,
                         color: Colors.green,
                       ),
                     ),
                     IconButton(
                       color: Theme.of(context).primaryColor,
                       icon: const Icon(
-                        Icons.send_outlined,
+                        FamilleIcons.send,
                         color: Colors.green,
                       ),
                       onPressed: () {},

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:famille/custom_icons.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -58,7 +59,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   IconButton(
                     color: Theme.of(context).primaryColor,
                     icon: const Icon(
-                      Icons.search_outlined,
+                      FamilleIcons.search,
                       color: Colors.green,
                     ),
                     onPressed: () {},
@@ -89,13 +90,25 @@ class _SearchScreenState extends State<SearchScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  AppLocalizations.of(context).searchHistory,
-                  style: const TextStyle(
-                    color: Colors.green,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Icon(
+                      FamilleIcons.history,
+                      color: Colors.green,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      AppLocalizations.of(context).searchHistory,
+                      style: const TextStyle(
+                        color: Colors.green,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(
                   height: 10,
@@ -113,7 +126,10 @@ class _SearchScreenState extends State<SearchScreen> {
                         fontSize: 15,
                       ),
                     ),
-                    Icon(Icons.close),
+                    Icon(
+                      FamilleIcons.cross,
+                      size: 15,
+                    ),
                   ],
                 ),
                 const SizedBox(
@@ -132,7 +148,10 @@ class _SearchScreenState extends State<SearchScreen> {
                         fontSize: 15,
                       ),
                     ),
-                    Icon(Icons.close),
+                    Icon(
+                      FamilleIcons.cross,
+                      size: 15,
+                    ),
                   ],
                 ),
               ],
