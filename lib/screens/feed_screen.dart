@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 import '../widgets/custom_card.dart';
 import '../widgets/stories.dart';
 import '../widgets/like_bar.dart';
@@ -21,7 +23,7 @@ class _FeedScreenState extends State<FeedScreen> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Ağİle',
+          AppLocalizations.of(context).appTitle,
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,

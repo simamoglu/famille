@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
 
@@ -14,7 +16,7 @@ class _SearchScreenState extends State<SearchScreen> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Ara',
+          AppLocalizations.of(context).search,
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
@@ -87,9 +89,9 @@ class _SearchScreenState extends State<SearchScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'Son aranılanlar:',
-                  style: TextStyle(
+                Text(
+                  AppLocalizations.of(context).searchHistory,
+                  style: const TextStyle(
                     color: Colors.green,
                     fontSize: 25,
                     fontWeight: FontWeight.bold,

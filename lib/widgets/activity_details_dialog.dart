@@ -10,6 +10,18 @@ class ActivityDetailsDialog extends StatefulWidget {
 class _ActivityDetailsDialogState extends State<ActivityDetailsDialog> {
   @override
   Widget build(BuildContext context) {
-    return const Dialog();
+    return Dialog(
+      child: Container(
+        margin: EdgeInsets.all(20),
+        padding: EdgeInsets.all(15),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text('data'),
+            Text('data2'),
+          ],
+        ),
+      ),
+    );
   }
 }

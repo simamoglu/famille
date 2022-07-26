@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../widgets/custom_card.dart';
 
-import './profile_settings_screen.dart';
+import 'settings_screens/profile_settings_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);

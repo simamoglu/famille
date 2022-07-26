@@ -47,10 +47,10 @@ class _FamilyScreenState extends State<FamilyScreen> {
                 text: 'Etkinlikler',
               ),
               Tab(
-                text: 'Yapılacaklar',
+                text: 'Listeler',
               ),
               Tab(
-                text: 'Alınacaklar',
+                text: 'Albümler',
               ),
             ],
           ),

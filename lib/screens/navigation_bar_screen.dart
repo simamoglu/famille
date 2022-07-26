@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'feed_screen.dart';
 import 'search_screen.dart';
@@ -40,9 +41,9 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             icon: const Icon(
               Icons.home_outlined,
             ),
-            title: const Text(
-              'Ana Sayfa',
-              style: TextStyle(
+            title: Text(
+              AppLocalizations.of(context).homePage,
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontFamily: 'Nunito',
               ),
@@ -55,9 +56,9 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             icon: const Icon(
               Icons.search_outlined,
             ),
-            title: const Text(
-              'Ara',
-              style: TextStyle(
+            title: Text(
+              AppLocalizations.of(context).search,
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontFamily: 'Nunito',
               ),
@@ -70,9 +71,9 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             icon: const Icon(
               Icons.group_outlined,
             ),
-            title: const Text(
-              'Aile',
-              style: TextStyle(
+            title: Text(
+              AppLocalizations.of(context).family,
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontFamily: 'Nunito',
               ),
@@ -85,9 +86,9 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             icon: const Icon(
               Icons.person_outline,
             ),
-            title: const Text(
-              'Ben',
-              style: TextStyle(
+            title: Text(
+              AppLocalizations.of(context).me,
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontFamily: 'Nunito',
               ),

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 import 'screens/navigation_bar_screen.dart';
 
 void main() {
@@ -16,7 +19,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      /*
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -27,7 +29,6 @@ class MyApp extends StatelessWidget {
         Locale('en', ''),
         Locale('tr', ''),
       ],
-      */
       debugShowCheckedModeBanner: false,
       title: 'Famille',
       theme: ThemeData(
