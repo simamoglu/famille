@@ -13,7 +13,7 @@ class LikeBar extends StatelessWidget {
       ),
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(
-            Radius.circular(50),
+            Radius.circular(20),
           ),
           color: Colors.green),
       padding: const EdgeInsets.all(5),

@@ -4,6 +4,7 @@ import 'package:famille/custom_icons.dart';
 
 import 'package:famille/widgets/custom_card.dart';
 import '../widgets/attend_bar.dart';
+import 'activity_details_screen.dart';
 
 class ActivitiesScreen extends StatelessWidget {
   const ActivitiesScreen({Key? key}) : super(key: key);
@@ -31,9 +32,29 @@ class ActivitiesScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                       horizontal: 10,
                     ),
-                    child: Text(
-                      'Piknik',
-                      style: Theme.of(context).textTheme.headline1,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Piknik',
+                          style: Theme.of(context).textTheme.headline1,
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const ActivityDetailsScreen(),
+                              ),
+                            );
+                          },
+                          icon: const Icon(
+                            FamilleIcons.info,
+                            color: Colors.green,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Padding(
@@ -48,31 +69,40 @@ class ActivitiesScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           children: const [
-                            Icon(
-                              FamilleIcons.user,
-                              color: Colors.green,
+                            CircleAvatar(
+                              backgroundColor: Colors.green,
+                              child: Icon(
+                                FamilleIcons.user,
+                                color: Colors.white,
+                              ),
                             ),
                             Text('8 kişi'),
                           ],
                         ),
                         Column(
                           children: const [
-                            Icon(
-                              FamilleIcons.location,
-                              color: Colors.green,
+                            CircleAvatar(
+                              backgroundColor: Colors.green,
+                              child: Icon(
+                                FamilleIcons.location,
+                                color: Colors.white,
+                              ),
                             ),
                             Text('Darıca Sahil'),
                           ],
                         ),
                         Column(
                           children: const [
-                            Icon(
-                              FamilleIcons.calendar,
-                              color: Colors.green,
+                            CircleAvatar(
+                              backgroundColor: Colors.green,
+                              child: Icon(
+                                FamilleIcons.calendar,
+                                color: Colors.white,
+                              ),
                             ),
                             Text('20 Temmuz'),
                           ],

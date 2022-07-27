@@ -22,7 +22,7 @@ class SettingsScreen extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(
-            FamilleIcons.angle_left,
+            FamilleIcons.angleleft,
           ),
           onPressed: () => Navigator.of(context).pop(),
         ),
@@ -138,7 +138,7 @@ class SettingsScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         const Icon(
-                          FamilleIcons.settings_sliders,
+                          FamilleIcons.settingssliders,
                           color: Colors.green,
                           size: 30,
                         ),

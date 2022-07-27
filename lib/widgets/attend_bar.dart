@@ -8,21 +8,21 @@ class AttendBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      decoration: const BoxDecoration(
-        color: Colors.green,
-        borderRadius: BorderRadius.all(
-          Radius.circular(50),
-        ),
-      ),
-      height: 50,
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          InkWell(
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Container(
+          padding: const EdgeInsets.all(10),
+          decoration: const BoxDecoration(
+            color: Colors.green,
+            borderRadius: BorderRadius.all(
+              Radius.circular(20),
+            ),
+          ),
+          height: 50,
+          child: InkWell(
             child: Row(
               children: [
                 const Icon(
@@ -39,24 +39,26 @@ class AttendBar extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                const SizedBox(
-                  width: 10,
-                ),
               ],
             ),
             onTap: () {},
           ),
-          const VerticalDivider(
-            color: Colors.white,
-            thickness: 2,
-            width: 1,
+        ),
+        const SizedBox(
+          width: 10,
+        ),
+        Container(
+          padding: const EdgeInsets.all(10),
+          decoration: const BoxDecoration(
+            color: Colors.green,
+            borderRadius: BorderRadius.all(
+              Radius.circular(20),
+            ),
           ),
-          InkWell(
+          height: 50,
+          child: InkWell(
             child: Row(
               children: [
-                const SizedBox(
-                  width: 10,
-                ),
                 const Icon(
                   FamilleIcons.check,
                   size: 16,
@@ -75,8 +77,8 @@ class AttendBar extends StatelessWidget {
             ),
             onTap: () {},
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

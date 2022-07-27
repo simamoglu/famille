@@ -17,8 +17,8 @@ class CustomColorfulCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(
             colors: [
-              Colors.green.shade500,
-              Colors.green.shade700,
+              Colors.green.shade400,
+              Colors.green.shade600,
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,

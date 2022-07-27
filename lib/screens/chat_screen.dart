@@ -16,7 +16,7 @@ class _ChatScreenState extends State<ChatScreen> {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(
-            FamilleIcons.angle_left,
+            FamilleIcons.angleleft,
             color: Colors.green,
           ),
           onPressed: () => Navigator.of(context).pop(),

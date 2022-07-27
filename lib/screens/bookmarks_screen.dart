@@ -14,7 +14,7 @@ class BookmarksScreen extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(
-            FamilleIcons.angle_left,
+            FamilleIcons.angleleft,
           ),
           onPressed: () => Navigator.of(context).pop(),
         ),

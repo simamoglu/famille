@@ -17,6 +17,10 @@
     "notAttending": "Not Attending",
     "lists": "Lists",
     "albums": "Albums",
+    "participants": "Participants",
+    "location": "Location",
+    "date": "Date",
+    "addtocalendar": "Add To Calendar",
 
     "bookmarks": "My Bookmarks",
     "alphabetical": "Alphabetical",

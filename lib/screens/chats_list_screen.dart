@@ -17,7 +17,7 @@ class ChatsListScreen extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(
-            FamilleIcons.angle_left,
+            FamilleIcons.angleleft,
           ),
           onPressed: () => Navigator.of(context).pop(),
         ),
