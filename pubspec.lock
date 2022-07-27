@@ -2,7 +2,7 @@
 # See https://dart.dev/tools/pub/glossary#lockfile
 packages:
   add_2_calendar:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: add_2_calendar
       url: "https://pub.dartlang.org"
@@ -78,6 +78,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.5"
+  expandable:
+    dependency: "direct main"
+    description:
+      name: expandable
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.0.1"
   fake_async:
     dependency: transitive
     description:
@@ -117,7 +124,7 @@ packages:
     source: hosted
     version: "2.0.7"
   flutter_rounded_date_picker:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_rounded_date_picker
       url: "https://pub.dartlang.org"

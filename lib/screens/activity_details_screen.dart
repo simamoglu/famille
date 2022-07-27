@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:famille/custom_icons.dart';
+import 'package:expandable/expandable.dart';
 
 import '../widgets/custom_card.dart';
 import '../widgets/attend_bar.dart';
@@ -78,30 +79,102 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
             height: 10,
           ),
           CustomCard(
-            Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      AppLocalizations.of(context).participants,
-                      style: const TextStyle(
-                        color: Colors.green,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        FamilleIcons.angledown,
-                        color: Colors.black,
-                        size: 10,
-                      ),
-                    ),
-                  ],
+            ExpandablePanel(
+              header: Text(
+                AppLocalizations.of(context).participants,
+                style: const TextStyle(
+                  color: Colors.green,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
                 ),
-              ],
+              ),
+              collapsed: const Text(
+                '8 kişi',
+                softWrap: true,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              expanded: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: const [
+                      CircleAvatar(
+                        radius: 20,
+                        backgroundImage: AssetImage("assets/images/pp2.jpg"),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        '@moira_esin',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: const [
+                      CircleAvatar(
+                        radius: 20,
+                        backgroundImage: AssetImage("assets/images/pp.jpg"),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        '@srtn_immgl',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+
+              /* collapsed: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        AppLocalizations.of(context).participants,
+                        style: const TextStyle(
+                          color: Colors.green,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          FamilleIcons.angledown,
+                          color: Colors.black,
+                          size: 10,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const Text(
+                    '8 kişi',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),*/
             ),
           ),
           const SizedBox(
@@ -201,6 +274,9 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
                 ),
               ],
             ),
+          ),
+          const SizedBox(
+            height: 15,
           ),
         ],
       ),
