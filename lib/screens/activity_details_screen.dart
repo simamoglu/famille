@@ -54,231 +54,205 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
           ),
         ],
       ),
-      body: ListView(
-        children: [
-          const SizedBox(
-            height: 15,
-          ),
-          const CustomColorfulCard(
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(
-                'Sahilde iki aile beraber piknik yapacağız. Gelecek olanlar "Katılıyorum"u işaretlesin lütfen!',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
+      body: ExpandableTheme(
+        data: const ExpandableThemeData(
+          iconColor: Colors.green,
+          useInkWell: true,
+          expandIcon: FamilleIcons.angledown,
+          collapseIcon: FamilleIcons.angledown,
+          iconSize: 10,
+        ),
+        child: ListView(
+          children: [
+            const SizedBox(
+              height: 15,
+            ),
+            const CustomColorfulCard(
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text(
+                  'Sahilde iki aile beraber piknik yapacağız. Gelecek olanlar "Katılıyorum"u işaretlesin lütfen!',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
                 ),
               ),
             ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const AttendBar(),
-          const SizedBox(
-            height: 10,
-          ),
-          CustomCard(
-            ExpandablePanel(
-              header: Text(
-                AppLocalizations.of(context).participants,
-                style: const TextStyle(
-                  color: Colors.green,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              collapsed: const Text(
-                '8 kişi',
-                softWrap: true,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              expanded: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundImage: AssetImage("assets/images/pp2.jpg"),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '@moira_esin',
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundImage: AssetImage("assets/images/pp.jpg"),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '@srtn_immgl',
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-
-              /* collapsed: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        AppLocalizations.of(context).participants,
-                        style: const TextStyle(
-                          color: Colors.green,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          FamilleIcons.angledown,
-                          color: Colors.black,
-                          size: 10,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const Text(
-                    '8 kişi',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),*/
+            const SizedBox(
+              height: 10,
             ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          CustomCard(
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(
-                  height: 5,
-                ),
-                Text(
-                  AppLocalizations.of(context).location,
+            const AttendBar(),
+            const SizedBox(
+              height: 10,
+            ),
+            CustomCard(
+              ExpandablePanel(
+                header: Text(
+                  AppLocalizations.of(context).participants,
                   style: const TextStyle(
                     color: Colors.green,
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Text(
-                  'Darıca sahil uzuuuncca bir adres varmış gibi davranın',
+                collapsed: const Text(
+                  '8 kişi',
+                  softWrap: true,
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  height: 300,
-                  width: double.infinity,
-                  margin: const EdgeInsets.all(5),
-                  child: GoogleMap(
-                    onMapCreated: _onMapCreated,
-                    initialCameraPosition: CameraPosition(
-                      target: _center,
-                      zoom: 11.0,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          CustomCard(
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(
-                  height: 5,
-                ),
-                Text(
-                  AppLocalizations.of(context).date,
-                  style: const TextStyle(
-                    color: Colors.green,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                expanded: Column(
                   children: [
-                    const Text(
-                      '20 Temmuz',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () {},
-                      child: Text(AppLocalizations.of(context).addtocalendar),
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        CircleAvatar(
+                          radius: 20,
+                          backgroundImage: AssetImage("assets/images/pp2.jpg"),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          '@moira_esin',
+                          style: TextStyle(
+                            fontSize: 20,
                           ),
                         ),
-                      ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        CircleAvatar(
+                          radius: 20,
+                          backgroundImage: AssetImage("assets/images/pp.jpg"),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          '@srtn_immgl',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
-              ],
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-        ],
+            const SizedBox(
+              height: 10,
+            ),
+            CustomCard(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    AppLocalizations.of(context).location,
+                    style: const TextStyle(
+                      color: Colors.green,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    'Darıca sahil uzuuuncca bir adres varmış gibi davranın',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 300,
+                    width: double.infinity,
+                    margin: const EdgeInsets.all(5),
+                    child: GoogleMap(
+                      onMapCreated: _onMapCreated,
+                      initialCameraPosition: CameraPosition(
+                        target: _center,
+                        zoom: 11.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            CustomCard(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    AppLocalizations.of(context).date,
+                    style: const TextStyle(
+                      color: Colors.green,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        '20 Temmuz',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Text(AppLocalizations.of(context).addtocalendar),
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.green),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+          ],
+        ),
       ),
     );
   }
