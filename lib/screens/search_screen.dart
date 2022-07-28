@@ -58,9 +58,9 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                   IconButton(
                     color: Theme.of(context).primaryColor,
-                    icon: const Icon(
+                    icon: Icon(
                       FamilleIcons.search,
-                      color: Colors.green,
+                      color: Theme.of(context).primaryColor,
                     ),
                     onPressed: () {},
                   ),
@@ -93,17 +93,17 @@ class _SearchScreenState extends State<SearchScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    const Icon(
+                    Icon(
                       FamilleIcons.history,
-                      color: Colors.green,
+                      color: Theme.of(context).primaryColor,
                     ),
                     const SizedBox(
                       width: 10,
                     ),
                     Text(
                       AppLocalizations.of(context).searchHistory,
-                      style: const TextStyle(
-                        color: Colors.green,
+                      style: TextStyle(
+                        color: Theme.of(context).primaryColor,
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
                       ),

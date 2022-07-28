@@ -49,9 +49,9 @@ class ActivitiesScreen extends StatelessWidget {
                               ),
                             );
                           },
-                          icon: const Icon(
+                          icon: Icon(
                             FamilleIcons.info,
-                            color: Colors.green,
+                            color: Theme.of(context).primaryColor,
                           ),
                         ),
                       ],
@@ -72,39 +72,39 @@ class ActivitiesScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
-                          children: const [
+                          children: [
                             CircleAvatar(
-                              backgroundColor: Colors.green,
-                              child: Icon(
+                              backgroundColor: Theme.of(context).primaryColor,
+                              child: const Icon(
                                 FamilleIcons.user,
                                 color: Colors.white,
                               ),
                             ),
-                            Text('8 kişi'),
+                            const Text('8 kişi'),
                           ],
                         ),
                         Column(
-                          children: const [
+                          children: [
                             CircleAvatar(
-                              backgroundColor: Colors.green,
-                              child: Icon(
+                              backgroundColor: Theme.of(context).primaryColor,
+                              child: const Icon(
                                 FamilleIcons.location,
                                 color: Colors.white,
                               ),
                             ),
-                            Text('Darıca Sahil'),
+                            const Text('Darıca Sahil'),
                           ],
                         ),
                         Column(
-                          children: const [
+                          children: [
                             CircleAvatar(
-                              backgroundColor: Colors.green,
-                              child: Icon(
+                              backgroundColor: Theme.of(context).primaryColor,
+                              child: const Icon(
                                 FamilleIcons.calendar,
                                 color: Colors.white,
                               ),
                             ),
-                            Text('20 Temmuz'),
+                            const Text('20 Temmuz'),
                           ],
                         ),
                       ],

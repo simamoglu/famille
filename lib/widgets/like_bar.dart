@@ -7,54 +7,53 @@ class LikeBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(
-        horizontal: 15,
+    return Card(
+      elevation: 3,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
       ),
-      decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(
-            Radius.circular(20),
-          ),
-          color: Colors.green),
-      padding: const EdgeInsets.all(5),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const SizedBox(
-            width: 5,
-          ),
-          IconButton(
-            icon: const Icon(
-              FamilleIcons.like,
-              //thump_up
-              color: Colors.white,
+      color: Theme.of(context).primaryColor,
+      child: Padding(
+        padding: const EdgeInsets.all(5),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(
+              width: 5,
             ),
-            onPressed: () {},
-          ),
-          const SizedBox(
-            width: 5,
-          ),
-          IconButton(
-            icon: const Icon(
-              FamilleIcons.comment,
-              color: Colors.white,
+            IconButton(
+              icon: const Icon(
+                FamilleIcons.like,
+                //thump_up
+                color: Colors.white,
+              ),
+              onPressed: () {},
             ),
-            onPressed: () {},
-          ),
-          const SizedBox(
-            width: 5,
-          ),
-          IconButton(
-            icon: const Icon(
-              FamilleIcons.bookmark,
-              color: Colors.white,
+            const SizedBox(
+              width: 5,
             ),
-            onPressed: () {},
-          ),
-          const SizedBox(
-            width: 5,
-          ),
-        ],
+            IconButton(
+              icon: const Icon(
+                FamilleIcons.comment,
+                color: Colors.white,
+              ),
+              onPressed: () {},
+            ),
+            const SizedBox(
+              width: 5,
+            ),
+            IconButton(
+              icon: const Icon(
+                FamilleIcons.bookmark,
+                color: Colors.white,
+              ),
+              onPressed: () {},
+            ),
+            const SizedBox(
+              width: 5,
+            ),
+          ],
+        ),
       ),
     );
   }

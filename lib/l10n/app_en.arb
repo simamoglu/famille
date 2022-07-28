@@ -16,6 +16,8 @@
     "attending": "Attending",
     "notAttending": "Not Attending",
     "lists": "Lists",
+    "todo": "To-Do",
+    "shopping": "Shopping",
     "albums": "Albums",
     "participants": "Participants",
     "location": "Location",

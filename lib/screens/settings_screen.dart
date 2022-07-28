@@ -47,9 +47,9 @@ class SettingsScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        const Icon(
+                        Icon(
                           FamilleIcons.user,
-                          color: Colors.green,
+                          color: Theme.of(context).primaryColor,
                           size: 30,
                         ),
                         const SizedBox(
@@ -92,9 +92,9 @@ class SettingsScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        const Icon(
+                        Icon(
                           FamilleIcons.palette,
-                          color: Colors.green,
+                          color: Theme.of(context).primaryColor,
                           size: 30,
                         ),
                         const SizedBox(
@@ -137,9 +137,9 @@ class SettingsScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        const Icon(
+                        Icon(
                           FamilleIcons.settingssliders,
-                          color: Colors.green,
+                          color: Theme.of(context).primaryColor,
                           size: 30,
                         ),
                         const SizedBox(
@@ -190,9 +190,9 @@ class SettingsScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        const Icon(
+                        Icon(
                           FamilleIcons.donate,
-                          color: Colors.green,
+                          color: Theme.of(context).primaryColor,
                           size: 30,
                         ),
                         const SizedBox(
@@ -235,9 +235,9 @@ class SettingsScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        const Icon(
+                        Icon(
                           FamilleIcons.info,
-                          color: Colors.green,
+                          color: Theme.of(context).primaryColor,
                           size: 30,
                         ),
                         const SizedBox(

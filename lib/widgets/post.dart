@@ -28,9 +28,9 @@ class Post extends StatelessWidget {
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.more_vert_outlined,
-                      color: Colors.green,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                 ],

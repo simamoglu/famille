@@ -28,6 +28,7 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(
@@ -44,9 +45,9 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(
+            icon: Icon(
               FamilleIcons.appsadd,
-              color: Colors.green,
+              color: Theme.of(context).primaryColor,
             ),
           ),
           const SizedBox(
@@ -55,8 +56,8 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
         ],
       ),
       body: ExpandableTheme(
-        data: const ExpandableThemeData(
-          iconColor: Colors.green,
+        data: ExpandableThemeData(
+          iconColor: Theme.of(context).primaryColor,
           useInkWell: true,
           expandIcon: FamilleIcons.angledown,
           collapseIcon: FamilleIcons.angledown,
@@ -90,17 +91,17 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
               ExpandablePanel(
                 header: Text(
                   AppLocalizations.of(context).participants,
-                  style: const TextStyle(
-                    color: Colors.green,
+                  style: TextStyle(
+                    color: Theme.of(context).primaryColor,
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                collapsed: const Text(
+                collapsed: Text(
                   '8 kişi',
                   softWrap: true,
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Theme.of(context).textTheme.bodyText1!.color,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -162,8 +163,8 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
                   ),
                   Text(
                     AppLocalizations.of(context).location,
-                    style: const TextStyle(
-                      color: Colors.green,
+                    style: TextStyle(
+                      color: Theme.of(context).primaryColor,
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
@@ -171,10 +172,10 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text(
+                  Text(
                     'Darıca sahil uzuuuncca bir adres varmış gibi davranın',
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Theme.of(context).textTheme.bodyText1!.color,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
@@ -209,8 +210,8 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
                   ),
                   Text(
                     AppLocalizations.of(context).date,
-                    style: const TextStyle(
-                      color: Colors.green,
+                    style: TextStyle(
+                      color: Theme.of(context).primaryColor,
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
@@ -221,20 +222,23 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         '20 Temmuz',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Theme.of(context).textTheme.bodyText1!.color,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       ElevatedButton(
                         onPressed: () {},
-                        child: Text(AppLocalizations.of(context).addtocalendar),
+                        child: Text(
+                          AppLocalizations.of(context).addtocalendar,
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
                         style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(Colors.green),
+                          backgroundColor: MaterialStateProperty.all(
+                              Theme.of(context).primaryColor),
                           shape:
                               MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(

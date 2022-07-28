@@ -30,9 +30,9 @@ class BookmarksScreen extends StatelessWidget {
                 Radius.circular(15),
               ),
             ),
-            icon: const Icon(
+            icon: Icon(
               FamilleIcons.filter,
-              color: Colors.green,
+              color: Theme.of(context).primaryColor,
             ),
             itemBuilder: (context) {
               return [
@@ -40,9 +40,9 @@ class BookmarksScreen extends StatelessWidget {
                   value: 'alphabetic',
                   child: Row(
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.sort_by_alpha_outlined,
-                        color: Colors.green,
+                        color: Theme.of(context).primaryColor,
                       ),
                       const SizedBox(
                         width: 10,
@@ -58,9 +58,9 @@ class BookmarksScreen extends StatelessWidget {
                   value: 'date',
                   child: Row(
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.history_outlined,
-                        color: Colors.green,
+                        color: Theme.of(context).primaryColor,
                       ),
                       const SizedBox(
                         width: 10,

@@ -39,9 +39,9 @@ class _FamilyScreenState extends State<FamilyScreen> {
                 ),
               );
             },
-            icon: const Icon(
-              FamilleIcons.share,
-              color: Colors.green,
+            icon: Icon(
+              FamilleIcons.add,
+              color: Theme.of(context).primaryColor,
             ),
           ),
           actions: [
@@ -54,10 +54,10 @@ class _FamilyScreenState extends State<FamilyScreen> {
                   ),
                 );
               },
-              icon: const Icon(
+              icon: Icon(
                 FamilleIcons.contacts,
                 size: 20,
-                color: Colors.green,
+                color: Theme.of(context).primaryColor,
               ),
             ),
             const SizedBox(
@@ -66,17 +66,16 @@ class _FamilyScreenState extends State<FamilyScreen> {
           ],
           bottom: TabBar(
             indicatorSize: TabBarIndicatorSize.label,
-            indicatorColor: Colors.green,
-            labelColor: Colors.green,
-            unselectedLabelColor: Colors.black,
+            indicatorColor: Theme.of(context).primaryColor,
+            labelColor: Theme.of(context).primaryColor,
+            unselectedLabelColor: Theme.of(context).textTheme.bodyText1!.color,
             unselectedLabelStyle: const TextStyle(
-              color: Colors.green,
               fontWeight: FontWeight.normal,
               fontSize: 16,
               fontFamily: 'Nunito',
             ),
-            labelStyle: const TextStyle(
-              color: Colors.green,
+            labelStyle: TextStyle(
+              color: Theme.of(context).primaryColor,
               fontWeight: FontWeight.bold,
               fontSize: 16,
               fontFamily: 'Nunito',
@@ -86,10 +85,10 @@ class _FamilyScreenState extends State<FamilyScreen> {
                 text: AppLocalizations.of(context).activities,
               ),
               Tab(
-                text: AppLocalizations.of(context).lists,
+                text: AppLocalizations.of(context).todo,
               ),
               Tab(
-                text: AppLocalizations.of(context).albums,
+                text: AppLocalizations.of(context).shopping,
               ),
             ],
           ),

@@ -29,9 +29,9 @@ class ChatsListScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(
+            icon: Icon(
               FamilleIcons.add,
-              color: Colors.green,
+              color: Theme.of(context).primaryColor,
             ),
           ),
           const SizedBox(

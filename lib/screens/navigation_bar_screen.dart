@@ -4,6 +4,7 @@ import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:famille/custom_icons.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import 'package:famille/widgets/providers/theme_provider.dart';
 import 'feed_screen.dart';
 import 'search_screen.dart';
 import 'family_screen.dart';
@@ -28,10 +29,10 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).backgroundColor,
       body: _pages[_selectedIndex],
       bottomNavigationBar: SalomonBottomBar(
-        unselectedItemColor: Colors.black,
+        unselectedItemColor: Theme.of(context).textTheme.bodyText1!.color,
         margin: const EdgeInsets.all(10),
         curve: Curves.ease,
         currentIndex: _selectedIndex,
@@ -50,7 +51,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                 fontFamily: 'Nunito',
               ),
             ),
-            selectedColor: Colors.green,
+            selectedColor: Theme.of(context).iconTheme.color,
           ),
 
           /// Likes
@@ -66,7 +67,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                 fontFamily: 'Nunito',
               ),
             ),
-            selectedColor: Colors.green,
+            selectedColor: Theme.of(context).iconTheme.color,
           ),
 
           /// Search
@@ -82,7 +83,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                 fontFamily: 'Nunito',
               ),
             ),
-            selectedColor: Colors.green,
+            selectedColor: Theme.of(context).iconTheme.color,
           ),
 
           /// Profile
@@ -98,7 +99,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                 fontFamily: 'Nunito',
               ),
             ),
-            selectedColor: Colors.green,
+            selectedColor: Theme.of(context).iconTheme.color,
           ),
         ],
       ),

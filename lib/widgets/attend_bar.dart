@@ -15,9 +15,9 @@ class AttendBar extends StatelessWidget {
       children: [
         Container(
           padding: const EdgeInsets.all(10),
-          decoration: const BoxDecoration(
-            color: Colors.green,
-            borderRadius: BorderRadius.all(
+          decoration: BoxDecoration(
+            color: Theme.of(context).primaryColor,
+            borderRadius: const BorderRadius.all(
               Radius.circular(20),
             ),
           ),
@@ -49,9 +49,9 @@ class AttendBar extends StatelessWidget {
         ),
         Container(
           padding: const EdgeInsets.all(10),
-          decoration: const BoxDecoration(
-            color: Colors.green,
-            borderRadius: BorderRadius.all(
+          decoration: BoxDecoration(
+            color: Theme.of(context).primaryColor,
+            borderRadius: const BorderRadius.all(
               Radius.circular(20),
             ),
           ),

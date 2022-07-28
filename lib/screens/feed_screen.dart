@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:famille/custom_icons.dart';
 
-import '../widgets/custom_card.dart';
 import '../widgets/stories.dart';
-import '../widgets/like_bar.dart';
 import '../widgets/post.dart';
 import './chats_list_screen.dart';
 
@@ -33,10 +31,10 @@ class _FeedScreenState extends State<FeedScreen> {
               Radius.circular(15),
             ),
           ),
-          icon: const Icon(
+          icon: Icon(
             FamilleIcons.add,
             size: 20,
-            color: Colors.green,
+            color: Theme.of(context).primaryColor,
           ),
           itemBuilder: (context) {
             return [
@@ -44,9 +42,9 @@ class _FeedScreenState extends State<FeedScreen> {
                 value: 'camera',
                 child: Row(
                   children: [
-                    const Icon(
+                    Icon(
                       FamilleIcons.camera,
-                      color: Colors.green,
+                      color: Theme.of(context).primaryColor,
                     ),
                     const SizedBox(
                       width: 10,
@@ -62,9 +60,9 @@ class _FeedScreenState extends State<FeedScreen> {
                 value: 'gallery',
                 child: Row(
                   children: [
-                    const Icon(
+                    Icon(
                       FamilleIcons.picture,
-                      color: Colors.green,
+                      color: Theme.of(context).primaryColor,
                     ),
                     const SizedBox(
                       width: 10,
@@ -93,10 +91,10 @@ class _FeedScreenState extends State<FeedScreen> {
                 ),
               );
             },
-            icon: const Icon(
+            icon: Icon(
               FamilleIcons.chats,
               size: 20,
-              color: Colors.green,
+              color: Theme.of(context).primaryColor,
             ),
           ),
           const SizedBox(
@@ -108,50 +106,21 @@ class _FeedScreenState extends State<FeedScreen> {
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            const SizedBox(
+          children: const [
+            SizedBox(
               height: 15,
             ),
-            const Stories(),
-            const SizedBox(
+            Stories(),
+            SizedBox(
               height: 15,
             ),
-            const Post(),
-            const SizedBox(
-              height: 15,
+            Post(),
+            SizedBox(
+              height: 45,
             ),
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 10,
-              ),
-              child: const Divider(
-                color: Colors.white,
-                thickness: 3,
-              ),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            CustomCard(
-              ClipRRect(
-                borderRadius: const BorderRadius.all(
-                  Radius.circular(20),
-                ),
-                child: Image.asset("assets/images/post2.jpg"),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: const [
-                LikeBar(),
-              ],
-            ),
-            const SizedBox(
-              height: 15,
+            Post(),
+            SizedBox(
+              height: 35,
             ),
           ],
         ),

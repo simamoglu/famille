@@ -44,9 +44,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             );
           },
-          icon: const Icon(
+          icon: Icon(
             FamilleIcons.bookmark,
-            color: Colors.green,
+            color: Theme.of(context).primaryColor,
           ),
         ),
         actions: [
@@ -59,9 +59,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               );
             },
-            icon: const Icon(
+            icon: Icon(
               FamilleIcons.settings,
-              color: Colors.green,
+              color: Theme.of(context).primaryColor,
             ),
           ),
           const SizedBox(

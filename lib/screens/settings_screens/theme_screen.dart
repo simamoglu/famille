@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:famille/custom_icons.dart';
 
+import 'package:famille/widgets/change_theme_button.dart';
+
 class ThemeScreen extends StatelessWidget {
   const ThemeScreen({Key? key}) : super(key: key);
 
@@ -18,6 +20,9 @@ class ThemeScreen extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(AppLocalizations.of(context).theme),
+      ),
+      body: const Center(
+        child: ChangeThemeButton(),
       ),
     );
   }

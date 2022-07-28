@@ -44,9 +44,9 @@ class _ChatScreenState extends State<ChatScreen> {
                   clipBehavior: Clip.none,
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.only(
+                      decoration: BoxDecoration(
+                          color: Theme.of(context).primaryColor,
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(10.0),
                             bottomRight: Radius.circular(20.0),
                             topLeft: Radius.circular(20.0),
@@ -119,18 +119,20 @@ class _ChatScreenState extends State<ChatScreen> {
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
-                        children: const [
+                        children: [
                           Text(
                             'Sertan',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Colors.black,
+                              color:
+                                  Theme.of(context).textTheme.bodyText1!.color,
                             ),
                           ),
                           Text(
                             'Merhaba ablaaa 😍',
                             style: TextStyle(
-                              color: Colors.black,
+                              color:
+                                  Theme.of(context).textTheme.bodyText1!.color,
                             ),
                             textAlign: TextAlign.right,
                           ),
@@ -154,9 +156,9 @@ class _ChatScreenState extends State<ChatScreen> {
                 right: 5.0,
                 bottom: 10.0,
               ),
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
+              decoration: BoxDecoration(
+                color: Theme.of(context).backgroundColor,
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(30),
                   topRight: Radius.circular(20),
                   bottomLeft: Radius.circular(20),
@@ -180,16 +182,16 @@ class _ChatScreenState extends State<ChatScreen> {
                     IconButton(
                       onPressed: () {},
                       color: Theme.of(context).primaryColor,
-                      icon: const Icon(
+                      icon: Icon(
                         FamilleIcons.clip,
-                        color: Colors.green,
+                        color: Theme.of(context).primaryColor,
                       ),
                     ),
                     IconButton(
                       color: Theme.of(context).primaryColor,
-                      icon: const Icon(
+                      icon: Icon(
                         FamilleIcons.send,
-                        color: Colors.green,
+                        color: Theme.of(context).primaryColor,
                       ),
                       onPressed: () {},
                     ),
