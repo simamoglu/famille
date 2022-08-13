@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:famille/custom_icons.dart';
+import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({Key? key}) : super(key: key);
@@ -21,10 +21,36 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: Text(
-          'Ablam',
-          style: Theme.of(context).appBarTheme.titleTextStyle,
+        title: Row(
+          children: [
+            Text(
+              'Ablam',
+              style: Theme.of(context).appBarTheme.titleTextStyle,
+            ),
+          ],
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              FamilleIcons.phonecall,
+              color: Theme.of(context).primaryColor,
+            ),
+          ),
+          const SizedBox(
+            width: 10,
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              FamilleIcons.info,
+              color: Theme.of(context).primaryColor,
+            ),
+          ),
+          const SizedBox(
+            width: 5,
+          ),
+        ],
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
       body: Container(

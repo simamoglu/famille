@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'widgets/providers/theme_provider.dart';
-import 'screens/navigation_bar_screen.dart';
+import 'screens/main/navigation_bar_screen.dart';
 
 void main() {
   runApp(const MyApp());

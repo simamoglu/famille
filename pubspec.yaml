@@ -48,6 +48,7 @@ flutter:
   assets:
    - assets/images/title.png
    - assets/images/bg.png
+   - assets/images/bg2.png
    - assets/images/waiting.png
    - assets/images/post.jpg
    - assets/images/post2.jpg

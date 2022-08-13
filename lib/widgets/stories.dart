@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './custom_colorful_card.dart';
+import './custom_widgets/custom_colorful_card.dart';
 
 class Stories extends StatelessWidget {
   const Stories({Key? key}) : super(key: key);

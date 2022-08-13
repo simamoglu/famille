@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:famille/custom_icons.dart';
+import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 
-import '../widgets/stories.dart';
-import '../widgets/post.dart';
-import './chats_list_screen.dart';
+import 'package:famille/widgets/stories.dart';
+import 'package:famille/widgets/post.dart';
+import '../chats_list_screen.dart';
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({Key? key}) : super(key: key);
@@ -33,7 +33,6 @@ class _FeedScreenState extends State<FeedScreen> {
           ),
           icon: Icon(
             FamilleIcons.add,
-            size: 20,
             color: Theme.of(context).primaryColor,
           ),
           itemBuilder: (context) {
@@ -93,7 +92,6 @@ class _FeedScreenState extends State<FeedScreen> {
             },
             icon: Icon(
               FamilleIcons.chats,
-              size: 20,
               color: Theme.of(context).primaryColor,
             ),
           ),

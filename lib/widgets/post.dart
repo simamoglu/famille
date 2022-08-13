@@ -1,7 +1,7 @@
 import 'package:famille/widgets/like_bar.dart';
 import 'package:flutter/material.dart';
 
-import './custom_card.dart';
+import './custom_widgets/custom_card.dart';
 
 class Post extends StatelessWidget {
   const Post({Key? key}) : super(key: key);

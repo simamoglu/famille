@@ -13,6 +13,9 @@
     "searchHistory": "Search History:",
 
     "activities": "Activities",
+    "addActivity": "New Activity",
+    "addList": "New List",
+    "addAlbum": "Add Photos",
     "attending": "Attending",
     "notAttending": "Not Attending",
     "lists": "Lists",
@@ -25,6 +28,10 @@
     "addtocalendar": "Add To Calendar",
 
     "shared": "Shared",
+    "games": "Games",
+    "gamesHint": "More games will be coming soon!",
+    "readList": "To Read",
+    "watchList": "To Watch",
     "extended": "My Extended Family",
 
     "bookmarks": "My Bookmarks",
@@ -45,5 +52,14 @@
     "donateHint": "Support the developer by donating.",
     "aboutHint": "Learn more about both the app version and the developer.",
 
-    "deleteAccount": "Delete My Account"
+    "deleteAccount": "Delete My Account",
+
+    "werewolf": "Vote the Werewolf Out",
+    "dice": "Throw a Dice",
+    "cards": "Playing Cards",
+    "chess": "Play Chess",
+    "treasure": "Find the Treasure",
+    "dart": "Play Dart",
+
+    "gameDetail": "This game is not available right now. It will come out and be ready to play really soon!"
 }

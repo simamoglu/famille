@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:famille/custom_icons.dart';
+import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 
 class LikeBar extends StatelessWidget {
   const LikeBar({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:famille/custom_icons.dart';
+import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -33,9 +33,9 @@ class _SearchScreenState extends State<SearchScreen> {
               right: 15.0,
               bottom: 10.0,
             ),
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
+            decoration: BoxDecoration(
+              color: Theme.of(context).secondaryHeaderColor,
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(20),
                 bottomLeft: Radius.circular(20),
@@ -69,21 +69,15 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
           ),
           const SizedBox(
-            height: 5,
-          ),
-          const CircleAvatar(
-            radius: 10,
-            backgroundColor: Colors.white,
-          ),
-          const SizedBox(
             height: 10,
           ),
           Container(
-            decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(20),
-                ),
-                color: Colors.white),
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.all(
+                Radius.circular(20),
+              ),
+              color: Theme.of(context).secondaryHeaderColor,
+            ),
             margin: const EdgeInsets.all(15),
             padding: const EdgeInsets.all(20),
             width: double.infinity,

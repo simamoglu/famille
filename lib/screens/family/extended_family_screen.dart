@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:famille/custom_icons.dart';
+import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 
-class SharedAlbumsScreen extends StatelessWidget {
-  const SharedAlbumsScreen({Key? key}) : super(key: key);
+class ExtendedFamilyScreen extends StatelessWidget {
+  const ExtendedFamilyScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +19,12 @@ class SharedAlbumsScreen extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          AppLocalizations.of(context).shared,
+          AppLocalizations.of(context).extended,
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
       ),
       body: const Center(
-        child: Text('deneme'),
+        child: Text('denemeee'),
       ),
     );
   }

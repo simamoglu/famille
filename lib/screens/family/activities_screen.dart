@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:famille/custom_icons.dart';
+import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 
-import 'package:famille/widgets/custom_card.dart';
-import '../widgets/attend_bar.dart';
-import 'activity_details_screen.dart';
+import 'package:famille/widgets/custom_widgets/custom_card.dart';
+import 'package:famille/widgets/attend_bar.dart';
+import '../activity_details_screen.dart';
 
 class ActivitiesScreen extends StatelessWidget {
   const ActivitiesScreen({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:famille/custom_icons.dart';
+import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 
 class ProfileSettingsScreen extends StatelessWidget {
   const ProfileSettingsScreen({Key? key}) : super(key: key);

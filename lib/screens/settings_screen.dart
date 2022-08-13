@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:famille/custom_icons.dart';
+import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 
-import '../widgets/custom_card.dart';
+import '../widgets/custom_widgets/custom_card.dart';
 
-import 'settings_screens/profile_settings_screen.dart';
-import 'settings_screens/about_screen.dart';
-import 'settings_screens/app_settings_screen.dart';
-import 'settings_screens/donation_screen.dart';
-import 'settings_screens/theme_screen.dart';
+import 'settings/profile_settings_screen.dart';
+import 'settings/about_screen.dart';
+import 'settings/app_settings_screen.dart';
+import 'settings/donation_screen.dart';
+import 'settings/theme_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);

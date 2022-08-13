@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
-import 'package:famille/custom_icons.dart';
+import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'package:famille/widgets/providers/theme_provider.dart';
-import 'feed_screen.dart';
-import 'search_screen.dart';
-import 'family_screen.dart';
-import 'profile_screen.dart';
+import './feed_screen.dart';
+import './search_screen.dart';
+import './family_screen.dart';
+import './profile_screen.dart';
 
 class NavigationBarScreen extends StatefulWidget {
   const NavigationBarScreen({Key? key}) : super(key: key);

@@ -6,7 +6,7 @@ class ShoppingListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text('mrbbb'),
+      child: Text('Shopping List'),
     );
   }
 }

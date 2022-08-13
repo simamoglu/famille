@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:famille/custom_icons.dart';
+import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 import 'package:expandable/expandable.dart';
 
-import '../widgets/custom_card.dart';
+import '../widgets/custom_widgets/custom_card.dart';
 import '../widgets/attend_bar.dart';
-import '../widgets/custom_colorful_card.dart';
+import '../widgets/custom_widgets/custom_colorful_card.dart';
 
 class ActivityDetailsScreen extends StatefulWidget {
   const ActivityDetailsScreen({Key? key}) : super(key: key);
@@ -46,7 +46,7 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
           IconButton(
             onPressed: () {},
             icon: Icon(
-              FamilleIcons.appsadd,
+              FamilleIcons.edit,
               color: Theme.of(context).primaryColor,
             ),
           ),
@@ -61,7 +61,7 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
           useInkWell: true,
           expandIcon: FamilleIcons.angledown,
           collapseIcon: FamilleIcons.angledown,
-          iconSize: 10,
+          iconSize: 8,
         ),
         child: ListView(
           children: [
@@ -232,9 +232,24 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
                       ),
                       ElevatedButton(
                         onPressed: () {},
-                        child: Text(
-                          AppLocalizations.of(context).addtocalendar,
-                          style: Theme.of(context).textTheme.bodyText2,
+                        child: Row(
+                          children: [
+                            const Icon(
+                              FamilleIcons.calendar,
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              AppLocalizations.of(context).addtocalendar,
+                              style: const TextStyle(
+                                fontSize: 16.0,
+                                fontFamily: 'Nunito',
+                                fontWeight: FontWeight.normal,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
                         ),
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(

@@ -13,6 +13,9 @@
     "searchHistory": "Arama Geçmişi:",
 
     "activities": "Aktiviteler",
+    "addActivity": "Yeni Aktivite",
+    "addList": "Yeni Liste",
+    "addAlbum": "Fotoğraf Ekle",
     "attending": "Katılıyorum",
     "notAttending": "Katılmıyorum",
     "lists": "Listeler",
@@ -25,6 +28,10 @@
     "addtocalendar": "Takvime Ekle",
 
     "shared": "Paylaşılanlar",
+    "games": "Oyunlar",
+    "gamesHint": "Daha fazla oyun çok yakında!",
+    "readList": "Okunacaklar",
+    "watchList": "İzlenecekler",
     "extended": "Geniş Ailem",
 
     "bookmarks": "Kaydedilenlerim",
@@ -45,5 +52,14 @@
     "donateHint": "Geliştiriciye bağış yaparak destekte bulun.",
     "aboutHint": "Uygulama versiyonu ve geliştiricisi hakkında daha çok bilgi edinin.",
 
-    "deleteAccount": "Hesabımı Sil"
+    "deleteAccount": "Hesabımı Sil",
+
+    "werewolf": "Vampir Köylü",
+    "dice": "Zar Fırlat",
+    "cards": "İskambil Kartları",
+    "chess": "Satranç Oyna",
+    "treasure": "Hazineyi Bul",
+    "dart": "Dart Oyna",
+
+    "gameDetail": "Bu oyun şuanda oynanamamaktadır. Çok yakında hazır olacaktır!"
 }

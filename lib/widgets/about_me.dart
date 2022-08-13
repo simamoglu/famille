@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:famille/custom_icons.dart';
+import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 
-import 'custom_colorful_card.dart';
+import './custom_widgets/custom_colorful_card.dart';
 
 class AboutMe extends StatelessWidget {
   const AboutMe({Key? key}) : super(key: key);

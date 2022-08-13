@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:famille/custom_icons.dart';
+import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 
-import '../widgets/custom_card.dart';
+import '../widgets/custom_widgets/custom_card.dart';
 import '../widgets/chat_list_item.dart';
 import './chat_screen.dart';
 

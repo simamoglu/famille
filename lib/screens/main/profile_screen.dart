@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:famille/custom_icons.dart';
+import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 
-import './settings_screen.dart';
-import './bookmarks_screen.dart';
-import '../widgets/about_me.dart';
-import '../widgets/post.dart';
+import '../settings_screen.dart';
+import '../bookmarks_screen.dart';
+import 'package:famille/widgets/about_me.dart';
+import 'package:famille/widgets/post.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
