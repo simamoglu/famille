@@ -5,7 +5,7 @@ import 'package:famille/widgets/custom_widgets/custom_icons.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import './feed_screen.dart';
-import './search_screen.dart';
+import './education_screen.dart';
 import './family_screen.dart';
 import './profile_screen.dart';
 
@@ -19,7 +19,7 @@ class NavigationBarScreen extends StatefulWidget {
 class _NavigationBarScreenState extends State<NavigationBarScreen> {
   final List _pages = [
     const FeedScreen(),
-    const SearchScreen(),
+    const EducationScreen(),
     const FamilyScreen(),
     const ProfileScreen(),
   ];
@@ -56,11 +56,11 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
           /// Likes
           SalomonBottomBarItem(
             icon: const Icon(
-              FamilleIcons.search,
+              FamilleIcons.book_open_cover,
               size: 20,
             ),
             title: Text(
-              AppLocalizations.of(context).search,
+              AppLocalizations.of(context).education,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontFamily: 'Nunito',

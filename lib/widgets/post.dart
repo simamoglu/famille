@@ -1,7 +1,7 @@
 import 'package:famille/widgets/like_bar.dart';
 import 'package:flutter/material.dart';
 
-import './custom_widgets/custom_card.dart';
+import './custom_widgets/custom_profile_card.dart';
 
 class Post extends StatelessWidget {
   const Post({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class Post extends StatelessWidget {
       alignment: Alignment.center,
       clipBehavior: Clip.none,
       children: [
-        CustomCard(
+        CustomProfileCard(
           Column(
             children: [
               Row(

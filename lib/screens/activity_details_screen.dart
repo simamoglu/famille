@@ -69,14 +69,11 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
               height: 15,
             ),
             const CustomColorfulCard(
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text(
-                  'Sahilde iki aile beraber piknik yapacağız. Gelecek olanlar "Katılıyorum"u işaretlesin lütfen!',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
+              Text(
+                'Sahilde iki aile beraber piknik yapacağız. Gelecek olanlar "Katılıyorum"u işaretlesin lütfen!',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
                 ),
               ),
             ),
@@ -183,15 +180,19 @@ class _ActivityDetailsScreenState extends State<ActivityDetailsScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  Container(
+                  SizedBox(
                     height: 300,
                     width: double.infinity,
-                    margin: const EdgeInsets.all(5),
-                    child: GoogleMap(
-                      onMapCreated: _onMapCreated,
-                      initialCameraPosition: CameraPosition(
-                        target: _center,
-                        zoom: 11.0,
+                    child: ClipRRect(
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(20),
+                      ),
+                      child: GoogleMap(
+                        onMapCreated: _onMapCreated,
+                        initialCameraPosition: CameraPosition(
+                          target: _center,
+                          zoom: 11.0,
+                        ),
                       ),
                     ),
                   ),

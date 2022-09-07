@@ -24,7 +24,7 @@ class CustomColorfulCard extends StatelessWidget {
             end: Alignment.bottomCenter,
           ),
         ),
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(20),
         child: cardChild,
       ),
     );

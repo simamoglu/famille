@@ -1,6 +1,7 @@
 {
     "appTitle": "Ağİle",
     "homePage": "Ana Sayfa",
+    "education": "Eğitim",
     "search": "Ara",
     "family": "Aile",
     "me": "Ben",
@@ -20,7 +21,13 @@
     "notAttending": "Katılmıyorum",
     "lists": "Listeler",
     "todo": "Yapılacaklar",
+    "todoHint": "Yapılacakları göster",
     "shopping": "Alınacaklar",
+    "shoppingHint": "Alınacakları göster",
+    "readList": "Okunacaklar",
+    "readHint": "Beraber okunacakları göster",
+    "watchList": "İzlenecekler",
+    "watchHint": "Beraber izlenecekleri göster",
     "albums": "Albümler",
     "participants": "Katılımcılar",
     "location": "Konum",
@@ -30,8 +37,7 @@
     "shared": "Paylaşılanlar",
     "games": "Oyunlar",
     "gamesHint": "Daha fazla oyun çok yakında!",
-    "readList": "Okunacaklar",
-    "watchList": "İzlenecekler",
+
     "extended": "Geniş Ailem",
 
     "bookmarks": "Kaydedilenlerim",
@@ -47,6 +53,11 @@
     "about": "Hakkında",
 
     "accountHint": "Email veya şifre gibi hesap bilgilerinizi düzenleyin.",
+    "nickname": "Kullanıcı İsmi",
+    "name": "Ad",
+    "surname": "Soyad",
+    "bio": "Hakkımda",
+
     "themeHint": "Uygulama temasının açık veya koyu olması, mesaj arkaplanının seçili resim olması gibi ayarları düzenleyin.",
     "appHint": "Uygulama bildirimlerini veya dilini değiştirmek için seçiniz.",
     "donateHint": "Geliştiriciye bağış yaparak destekte bulun.",

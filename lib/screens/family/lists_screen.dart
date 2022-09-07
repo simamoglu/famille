@@ -39,7 +39,7 @@ class ListsScreen extends StatelessWidget {
                 ),
               ),
               collapsed: Text(
-                'Show what to do next',
+                AppLocalizations.of(context).todoHint,
                 softWrap: true,
                 style: TextStyle(
                   color: Theme.of(context).textTheme.bodyText1!.color,
@@ -64,7 +64,7 @@ class ListsScreen extends StatelessWidget {
                 ),
               ),
               collapsed: Text(
-                'Show what to buy',
+                AppLocalizations.of(context).shoppingHint,
                 softWrap: true,
                 style: TextStyle(
                   color: Theme.of(context).textTheme.bodyText1!.color,
@@ -89,7 +89,7 @@ class ListsScreen extends StatelessWidget {
                 ),
               ),
               collapsed: Text(
-                'Show what to read together',
+                AppLocalizations.of(context).readHint,
                 softWrap: true,
                 style: TextStyle(
                   color: Theme.of(context).textTheme.bodyText1!.color,
@@ -114,7 +114,7 @@ class ListsScreen extends StatelessWidget {
                 ),
               ),
               collapsed: Text(
-                'Show what to watch next together',
+                AppLocalizations.of(context).watchHint,
                 softWrap: true,
                 style: TextStyle(
                   color: Theme.of(context).textTheme.bodyText1!.color,

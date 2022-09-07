@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class CustomCard extends StatelessWidget {
+class CustomProfileCard extends StatelessWidget {
   final Widget cardChild;
-  const CustomCard(this.cardChild, {Key? key}) : super(key: key);
+  const CustomProfileCard(this.cardChild, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class CustomCard extends StatelessWidget {
       ),
       color: Theme.of(context).secondaryHeaderColor,
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(10),
         child: cardChild,
       ),
     );

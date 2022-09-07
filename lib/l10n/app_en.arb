@@ -1,6 +1,7 @@
 {
     "appTitle": "Famille",
     "homePage": "Home Page",
+    "education": "Education",
     "search": "Search",
     "family": "Family",
     "me": "Me",
@@ -20,7 +21,13 @@
     "notAttending": "Not Attending",
     "lists": "Lists",
     "todo": "To-Do",
+    "todoHint": "Show what to do next",
     "shopping": "Shopping",
+    "shoppingHint": "Show what to buy",
+    "readList": "To Read",
+    "readHint": "Show what to read together",
+    "watchList": "To Watch",
+    "watchHint": "Show what to watch together",
     "albums": "Albums",
     "participants": "Participants",
     "location": "Location",
@@ -30,8 +37,7 @@
     "shared": "Shared",
     "games": "Games",
     "gamesHint": "More games will be coming soon!",
-    "readList": "To Read",
-    "watchList": "To Watch",
+
     "extended": "My Extended Family",
 
     "bookmarks": "My Bookmarks",
@@ -47,6 +53,11 @@
     "about": "About",
 
     "accountHint": "Edit account settings like email or password of your account.",
+    "nickname": "Nickname",
+    "name": "Name",
+    "surname": "Surname",
+    "bio": "Bio",
+
     "themeHint": "Choose between app themes like light or dark, or even choose an image background for chats.",
     "appHint": "Change app notifications or app language.",
     "donateHint": "Support the developer by donating.",

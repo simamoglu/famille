@@ -39,7 +39,7 @@ class _FamilyScreenState extends State<FamilyScreen> {
               );
             },
             icon: Icon(
-              FamilleIcons.dice,
+              FamilleIcons.gamepad,
               color: Theme.of(context).primaryColor,
             ),
           ),
